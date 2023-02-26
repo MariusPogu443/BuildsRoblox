@@ -1,10 +1,12 @@
+<!DOCTYPE html>
+
 <html lang="fr-fr">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Build Store - Accueil</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="shortcut icon" href="ressource/icons.png" type="images/png" />
+        <link rel="shortcut icon" href="ressource/logocubesite.png" type="images/png" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
         <link rel="stylesheet" href="Main.css">
         <script src="https://kit.fontawesome.com/e0ee6af32a.js" crossorigin="anonymous"></script>
@@ -14,7 +16,7 @@
 
         <nav>
             <a href="index.html" class="nav-icon" aria-label="visit homepage" aria-current="page">
-                <img src="ressource/icons.png"
+                <img src="ressource/logocubesite.png"
                 alt="buildstore icon">
                 <span>BuildStore</span>
             </a>
@@ -34,27 +36,45 @@
                 <a href="#">Builds</a>
                 <a href="#">Véhicules</a>
             </div>
+
+            <div class="nav-authendication">
+                <a href="#" class="user-toggler" aria-label="Sign in page">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+                <div class="sign-btns">
+                    <button type="button" >s'identifier</button>
+                    <button type="button">s'inscrire</button>
+                </div>
+            </div>
         </nav>
 
        <div class="grid-contnair">
         <div class="grid-item">
-            <img class="image" src="ressource/Capture d’écran 2022-08-31 013910.png">
-            <h3>Marius</h3>
-            <a href="https://mega.nz/file/he9mjIZS#RfpS7yGIcwXdG6e7qCHRWtO4uPrWhkR9EnUxi5nCJyw" target="_blank" >Télécharger</a>
-        </div>
-        <div class="grid-item">
-            <img class="image" src="ressource/Capture d’écran 2022-08-31 013910.png">
-            <h3>Marius</h3>
-            <a href="#" target="_blank" >Télécharger</a>
-        </div>
-        <div class="grid-item">
-            <img class="image" src="ressource/Capture d’écran 2022-08-31 013910.png">
-            <h3>Marius</h3>
-            <a href="#" target="_blank" >Télécharger</a>
+            <div class="grid-img">
+                <img class="image" src="ressource/Capture d’écran 2022-08-31 013910.png" loading="lazy" alt>
+            </div>
+            <div class="grid-info">
+                <h4>Pompier</h4>
+                <p>Pompier</p>
+                <a href="ressource/icons.png" download="Pompier 1 - vLife" class="details-link" title="Télécharger">
+                    <i class="fa-thin fa-download"></i>
+                </a>
+            </div>
+            
         </div>
        </div>
 
-        <!-- <footer>Tous droit est sanctionner</footer> -->
+        <!-- <footer>
+            <h3>BuildStore&copy;</h3>
+            <p>Site de téléchargement de models gratuit roblox </p>
+            <br>
+            <p>Tous droits réservés.</p>
+
+            <div class="info-contnaire">
+                <a href="#"><img src="ressource/discord.png"></a>
+                <a href="#"><img src="ressource/Roblox_player_icon_blacksvg.png"></a>
+            </div>
+        </footer> -->
 
         <script src="script.js"></script>
     </body>
