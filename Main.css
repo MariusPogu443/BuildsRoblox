@@ -279,16 +279,3 @@ footer img{
     150px);
     justify-content: center;
 }
-
-.image{
-    height: 150px;
-}
-
-.grid-item .grid-img{
-    overflow: hidden;
-}
-
-.grid-item{
-    border-radius: 2px;
-    box-shadow: 5px 5px 20px rgb(0, 0, 0);
-}
