@@ -1,3 +1,7 @@
+::selection{
+    background-color: #941414;
+}
+
 * {
     box-sizing:  border-box;
     margin: 0;
@@ -234,38 +238,6 @@ nav {
 
 /* footer */
 
-footer {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    color: #ffffff;
-    align-items: center;
-    font-family: sans-serif;
-    background: #30302e;
-    padding: 20px;
-    font-size: 18px;
-    text-align: center;
-    box-shadow: inset 0px 
-    1px 0px #383836;
-}
-
-footer p{
-    font-size: 15px;
-    margin-top: 5px;
-    color: #4b4b4b;
-}
-
-footer h3{
-    color : #941414;
-}
-
-footer img{
-    width: 25px;
-    margin-top: 10px;
-}
-
 /* contnaire */
 
 .grid-contnair{
@@ -291,6 +263,7 @@ footer img{
 
 .profile-img{
     width: 100%;
+    filter: blur(50);
     height: 100%;
     object-fit: cover;
 }
@@ -353,7 +326,9 @@ ul a img {
     background-color: #30302e;
     position: absolute;
     top: 0;
+    color: white;
     border-radius: 5px;
+    font-size: 13px;
     list-style-type: none;
     margin: 5px;
     padding: 5px;
@@ -361,11 +336,10 @@ ul a img {
     border: 1px solid #4d4d4b;
 }
 
-.img-model{
+.textmodel{
     width: 100%;
     align-items: center;
     justify-content: center;
     display: flex;
 }
-
 
