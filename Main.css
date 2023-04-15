@@ -349,11 +349,47 @@ ul a img {
     display:flex;
 }
 
+.model-info i {
+    color: #ffffff;
+}
+
+.like-main {
+    display: flex;
+    background-color: #30302e;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.like-main .like i{
+    margin-right: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.like-main span {
+    border: none;
+    background: inherit;
+    color: #ffffff;
+    font-size: 15px;
+    width: 30px;
+}
+
+.like{
+    border: none;
+    background: inherit;
+}
+
+.like-main .like.color i{
+    color: #941414;
+}
+
 /* Demande */
 .demande-div{
     box-shadow: inset 0px 1px 0px #383836;
     background: #30302e;
-
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .demande-div h2{
