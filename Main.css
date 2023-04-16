@@ -384,24 +384,71 @@ ul a img {
 }
 
 /* Demande */
-.demande-div{
-    box-shadow: inset 0px 1px 0px #383836;
-    background: #30302e;
+
+.section-demande{
+    background-color: #2e2e2e;
+    padding: 50px;
+}
+
+.section-demande .container{
+    background: linear-gradient(90deg, rgba(32, 32, 32, 0.4) 0%, rgba(17, 17, 17, 0.4) 100%);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.section-demande .content{
+    width: 550px;
+}
+
+.section-demande .title{
+    font-size: 25px;
+    line-height: 36px;
+    margin-bottom: 30px;
+    color: #cacaca;
+}
+
+.section-demande p {
+    color: #b4b4b4;
+    margin-bottom: 30px;
+}
+
+.title strong{
+    color: #941414;
+}
+
+.button_demande{
+    position: relative;
+    display: inline-block;
+    border: none;
+    border-radius: 3px;
+    padding: 0 20px;
+    text-align: center;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0 30px;
+    min-width: 44px;
+    height: 44px;
+    font-size: 16px;
+    line-height: 44px;
+    transition: 250ms linear;
+    background: #941414;
+    color: #fff;
+}
+
+.img_demande{
+    display: flex;
     position: absolute;
-    bottom: 0;
-    width: 100%;
+    left: 0;
 }
 
-.demande-div h2{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgb(216, 216, 216);
-}
+/* page demande */
 
-.demande-div p {
-    display: flex;
-    align-items: center;
+.navlinks-container-demande{
+    color: white;
+    display: block;
+    position: absolute;
     justify-content: center;
-    color: rgb(216, 216, 216);
+    align-items: center;
+
 }

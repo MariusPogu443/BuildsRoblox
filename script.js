@@ -24,7 +24,7 @@ new ResizeObserver(entries => {
 
 const likeButtons = document.querySelectorAll('.like');
 
-const initialLikes = JSON.parse(sessionStorage.getItem('likes') || '{}');
+const initialLikes = JSON.parse(localStorage.getItem('likes') || '{}');
 
 likeButtons.forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -42,7 +42,7 @@ likeButtons.forEach((btn) => {
             const id = btn.dataset.id;
             initialLikes[id] = count - 1;
         }
-        sessionStorage.setItem('likes', JSON.stringify(initialLikes));
+        localStorage.setItem('likes', JSON.stringify(initialLikes));
     });
 });
 
