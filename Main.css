@@ -444,11 +444,22 @@ ul a img {
 
 /* page demande */
 
-.navlinks-container-demande{
-    color: white;
-    display: block;
-    position: absolute;
+.contnaire-demande{
+    padding: 50px;
+}
+
+
+.contenaire{
+    background: linear-gradient(90deg, rgba(29, 29, 29, 0.4) 0%, rgba(34, 34, 34, 0.4) 100%);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.titre-demannde{
+    display: flex;
     justify-content: center;
     align-items: center;
-
+    font-size: 30px;
+    color: #ffffff;
 }
+
