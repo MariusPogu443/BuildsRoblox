@@ -450,11 +450,44 @@ ul a img {
 }
 
 .img_demande{
-    display: flex;
-    position: absolute;
-    left: 0;
+    position: relative;
+   left: 100%;
 }
 
+/* sqds */
+
+.Win-roblox{
+    padding: 50px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    
+}
+
+.Win-roblox .Winrar{
+    position: absolute;
+    left: 75%;
+    background-color: #30302e;
+    border-radius: 5px;
+    width: 270px;
+    height: 100px;
+}
+
+.Win-roblox  .Roblox{
+    position: absolute;
+    right: 75%;
+    background-color: #30302e;
+    border-radius: 5px;
+    width: 270px;
+    height: 100px;
+}
+
+
+.imgdiv{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
 /* page demande */
 
 .contnaire-demande{
