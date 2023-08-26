@@ -527,24 +527,23 @@ ul a img {
     object-fit: cover;
     height: 100%;
 }
-/* page demande */
+/* Section erreur */
 
-.contnaire-demande{
+.ErreurSection{
     padding: 50px;
+    position: relative;
+    margin-top: 50px;
 }
 
-
-.contenaire{
-    background: linear-gradient(90deg, rgba(29, 29, 29, 0.4) 0%, rgba(34, 34, 34, 0.4) 100%);
-    padding: 30px;
+.ErreurSection .content{
+    background-image: url("ressource/Plan\ de\ travail\ 1.png");
+    padding: 40px;
     border-radius: 10px;
-}
-
-.titre-demannde{
+    font-size: larger;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    position: relative;
     color: #ffffff;
 }
 
