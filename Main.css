@@ -400,8 +400,17 @@ ul a img {
 }
 
 .model-info i {
-    color: #ffffff;
+    color: white;
+    background-color: #2a2a29;
+    border-radius: 3px;
+    margin: 5px;
+    color: yellow;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    display:flex;
 }
+
 
 .like-main {
     display: flex;
