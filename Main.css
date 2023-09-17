@@ -1,5 +1,5 @@
 ::selection{
-    background-color: #941414;
+    background-color: #D00000;
 }
 
 * {
@@ -31,6 +31,38 @@ body {
     background-color: #2a2a29;
 }
 
+#google_translate_element select{
+   background-color: #3b3b3b;
+   border: none;
+   color: white;
+   padding: 5px;
+   border-radius: 5px;
+}
+
+#google_translate_element{
+    position: absolute;
+    display: flex;
+    right: 0;
+    margin-right: 15px;
+    font-family: Montserrat, Helvetica, sans-serif;
+}
+
+#google_translate_element span{
+    display: none;
+}
+
+#google_translate_element select::-webkit-scrollbar{
+    display: none;
+}
+
+#google_translate_element select:hover{
+    cursor: pointer;
+}
+
+#google_translate_element .skiptranslate{
+   font-size: 0;
+}
+
 nav {
     position: relative;
     width: 100%;
@@ -43,7 +75,7 @@ nav {
 }
 
 nav.sticky{
-    position: fixed;
+    position: sticky;
     background: #30302e;
     z-index: 2;
     padding: 18px 25px;
@@ -82,6 +114,52 @@ nav.sticky{
     position: relative;
 }
 
+@keyframes bar {
+    0% {
+        transform: scaleX(0);
+    }
+
+    20%{
+        transform: scaleX(0.2);
+    }
+
+
+    40%{
+        transform: scaleX(0.4);
+    }
+
+    50% {
+        transform: scaleX(0.5);
+    }
+
+    70%{
+        transform: scaleX(0.7);
+    }
+
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+nav::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    transform-origin: left;
+    background: #D00000;
+    transition: transform 0.3s ease-out;
+    animation: bar 11s linear infinite;
+}
+
+nav.Loader::after {
+    opacity: 0;
+}
+
+
 .navlinks-container a::after {
     content: "";
     display: block;
@@ -97,6 +175,11 @@ nav.sticky{
 
 .navlinks-container a:hover::after {
     transform: scaleX(1);
+}
+
+.navlinks-container a:hover{
+    color: white;
+    transition: color 0.3s ease;
 }
 
 .nav-authendication{
@@ -133,10 +216,6 @@ nav.sticky{
     nav {
         padding:  15px 20px;
         position: relative;
-    }
-
-    .Win-roblox {
-        display: none;
     }
 
     .nav-icon {
@@ -245,6 +324,12 @@ nav.sticky{
     }
 }
 
+@media (max-width: 670px){
+    #google_translate_element{
+        display: none;
+    }
+}
+
 .Box {
     color: #424242;
     text-align: center;
@@ -318,6 +403,21 @@ ul a img {
     top: 0;
     padding: 10px;
     margin-top: 5px;
+    transition: all 0.2s ease;
+}
+
+.download:hover{
+    transform: scale(1.1);
+}
+
+.downloadno {
+    cursor:auto;
+    position: absolute;
+    width: 50px;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    margin-top: 5px;
 }
 
 .downloadCl {
@@ -385,6 +485,7 @@ ul a img {
 #New{
     background-color: #d00000;
     box-shadow: 0 0 10px #d00000;
+    border: solid 1px #db0202;
 }
 
 .model-info p {
@@ -400,12 +501,23 @@ ul a img {
 }
 
 .model-info i {
-    color: white;
+
     background-color: #2a2a29;
     border-radius: 3px;
     margin: 5px;
     color: yellow;
     padding: 5px;
+    align-items: center;
+    justify-content: center;
+    display:flex;
+}
+
+.Info {
+    text-decoration: none;
+}
+
+#Info{
+    color: rgb(255, 255, 255);
     align-items: center;
     justify-content: center;
     display:flex;
@@ -447,20 +559,43 @@ ul a img {
 .section-demande{
     background-color: #2e2e2e;
     padding: 50px;
-    position: relative;
+    box-shadow: inset 0px 1px 0px #383836;
 }
 
 .section-demande .container{
     background: linear-gradient(90deg, rgba(32, 32, 32, 0.4) 0%, rgba(17, 17, 17, 0.4) 100%);
     padding: 30px;
     border-radius: 10px;
+    display: flex;
     position: relative;
+
+}
+
+.section-demande .container .ImageDemande{
+    display: block;
+    position: relative;
+    width: 50%;
+}
+
+.section-demande .container .content{
+    display: block;
+    text-align: center;
+    justify-content: start;
+    position: relative;
+    align-items: center;
+    text-align: left;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s ease;
 }
 
 
+.ImageDemande img{
+    width: 100%;
+}
 
 .section-demande .title{
-    position: relative;
     font-size: 25px;
     line-height: 36px;
     margin-bottom: 30px;
@@ -470,89 +605,454 @@ ul a img {
 .section-demande p {
     color: #b4b4b4;
     margin-bottom: 30px;
-    position: relative;
 }
 
 .title strong{
     color: #d00000;
 }
 
+.button_demande:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #d00000;
+}
+
 .button_demande{
-    position: relative;
-    display: inline-block;
-    border: none;
+    display: flex;
     border-radius: 3px;
-    padding: 0 20px;
     text-align: center;
-    font-weight: 600;
     text-decoration: none;
     cursor: pointer;
-    padding: 0 30px;
-    min-width: 44px;
-    height: 44px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
     font-size: 16px;
-    line-height: 44px;
-    transition: 250ms linear;
+    width: 150px;
+    transition: all 0.2s ease;
     background: #d00000;
     color: #fff;
 }
 
-/* sqds */
 
-.Win-roblox{
-    margin-top: 45px;
-    padding: 50px;
+/* PageTurn */
+
+.PageTurn .container{
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
-.Win-roblox .content{
+.ListePage{
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    color: white;
+    align-items: center;
     position: relative;
+    padding: 8px;
+}
+
+.ListePage ul{
+    display: flex;
+    box-shadow: inset 0px -1px 0px #383836;
+    padding: 10px;
+}
+
+.ListePage ul li.dots{
+    font-size: 22px;
+    cursor: default;
+}
+
+.ListePage ul li.btn{
+    background-color: #D00000;
+    padding: 0 15px;
+    border-radius: 40px;
+    opacity: 0.7;
+    transition: all 0.2s ease-in;
+}
+
+.ListePage ul li.btn:hover{
+    opacity: 1;
+}
+
+.ListePage ul li.numb::after{
+    content: "";
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: center;
+    background: rgb(68, 64, 64);
+    transition: transform 0.3s ease-out;
+}
+
+
+.ListePage ul li.numb:hover::after, .ListePage ul li.activer::after{
+    transform: scaleX(1);
+}
+
+.ListePage ul li.numb:hover, .ListePage ul li.activer{
+    color: white;
+}
+
+.ListePage ul li{
+    list-style: none;
+    line-height: 45px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    color: rgb(216, 216, 216);
+}
+
+
+.ListePage ul li.numb{
+    width: 45px;
+    height: 45px;
+}
+
+/* Parrtenaire */
+
+.Partenaria .container{
+    background-color: #2e2e2e;
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    box-shadow: inset 0px 1px 0px #383836;
+}
+
+
+.Discord{
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.DiscordPartenaire{
+    max-width: 100%;
+    display: flex;
+    position: relative;
+    filter: grayscale(100%);
+    width: 150px;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.DiscordPartenaire:hover{
+    filter: grayscale(0%);
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    transition: all 0.4s ease-out;
+}
+
+.DiscordPartenaire:hover img{
+    transform: scale(1.2);
+    transition: all 0.4s ease-out;
+}
+
+#IRS img{
+    width: 80px;
+}
+
+#DEV img{
+    width: 20px;
+}
+
+.Partenaria img{
+    max-width: 100%;
+    display: inline-block;
+    position: relative;
+    width: 40px;
+}
+
+/* Up Button */
+
+.button-up.Open{
+    opacity: 1;
+}
+
+.button-up .Button i{
+    color: white;
+    font-size: 25px;
+}
+
+.button-up .Button:hover{
+    transform: scale(1.1);
+}
+
+.button-up .Button{
+    background-color: #d00000;
+    box-shadow: 0 0 10px #d00000;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    justify-content: center;
+    height: 50px;
+    right: 0;
+    transition: all 0.2s ease-in;
+}
+
+.button-up{
+    transition: all 0.2s ease-in;
+    opacity: 0;
+    position: fixed;
+    display: inline;
+    align-items: center;
+    color: white;
+    bottom: 15px;
+    right: 15px;
+    width: 50px;
+    z-index: 80;
+}
+
+/* Footer */
+
+html {
+    scroll-behavior: smooth;
+  }
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+    display: flex;
+  }
+
+  .ButtonLien::after{
+    content: "";
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: center;
+    background: rgb(68, 64, 64);
+    transition: transform 0.3s ease-out;
+  }
+
+  .footer-section.contact a{
+    color: #c5c5c5;
+    text-decoration: none;
+    margin: 0;
+    margin-left: 5px;
+  }
+  
+  .ButtonLien, .footer-section.contact{
+    color: #c5c5c5;
+    text-decoration: none;
+  }
+
+  .footer-section p {
+    margin: 0;
+    margin-top: 5px;
+  }
+
+  .social a {
+    font-size: 24px;
+    color: #c5c5c5;
+    margin-right: 10px;
+  }
+  
+  .social a:hover i {
+    color: #d00000;
+    transition: all 0.1s ease-in ;
+    transform: scale(1.2);
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 10px;
+    background-color: #2e2e2e;
+    overflow: hidden;
+  }
+  
+  .footer-bottom {
+    margin: 0;
+    color: rgb(68, 68, 68);
+  }
+  
+  .ButtonLien:hover::after {
+    transform: scaleX(1);
+  }
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .footer-section .Description{
+    font-size: 15px;
+    color: #6b6b6b;
+  }
+  
+  .footer-section h1, .footer-section h2, .footer-section h3{
+    color: #fff;
+  }
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+footer{
+    background-color: #2e2e2e;
+    width: 100%;
+    height: 200px;
+    padding: 20px 0;
+    display: block;
+    overflow: hidden;
+    align-items: center;
+    box-shadow: inset 0px 1px 0px #383836;
+}
+
+/* Titre */
+
+.TitrePage .container{
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    color: white;
+}
+
+.TitrePage .container h1::after{
+    content: "";
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    transform: scaleX(1);
+    transform-origin: center;
+    background: rgb(68, 64, 64);
+    transition: transform 0.3s ease-out;
+}
+
+.Titre{
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    position: relative;
+    padding: 15px;
 }
 
-.Win-roblox .Winrar{
-    position: absolute;
-    background-color: #30302e;
-    border-radius: 5px;
-    left: 0;
-    width: 270px;
-    height: 100px;
+/* Outil */
+
+.Win-roblox .container{
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
 }
 
-.Win-roblox  .Roblox{
-    position: absolute;
-    right: 0;
-    background-color: #30302e;
-    border-radius: 5px;
-    width: 270px;
-    height: 100px;
-}
-
-
-.imgdiv{
-    width: 100%;
-    object-fit: cover;
+.Outil{
+    justify-content: space-between;
+    width: 80%;
     height: 100%;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    position: relative;
+    padding: 15px;
+}
+
+.Winrar{ 
+    display: flex;
+    position: relative;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.Roblox{
+    display: block;
+    position: relative;
+    width: 150px;
+    align-items: center;
+}
+
+.Win-roblox img{
+    display: inline-block;
+    position: relative;
+    width: 100%;
 }
 /* Section erreur */
 
-.ErreurSection{
-    padding: 50px;
+.MenuOption{
+    display: flex;
+    align-items: center;
     position: relative;
-    margin-top: 50px;
+    justify-content: center;
+    background-color: #d00000;
+    box-shadow: 0 4px 10px #d00000;
+    width: 100%;
+    overflow: hidden;
+    font-weight: 500;
 }
 
-.ErreurSection .content{
-    background-image: url("ressource/Plan\ de\ travail\ 1.png");
-    padding: 40px;
-    border-radius: 10px;
-    font-size: larger;
+.MenuOption.sticky{
+    position: sticky;
+    z-index: 2;
+    top: 81px;
+    left: 0;
+}
+
+
+.MenuOption .content{
+    position: relative;
+    display: flex;
+    padding: 5px;
+    color: white;
+    font-size: 15px;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    max-width: 500;
+}
+
+.MenuOption .Button{
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    color: #ffffff;
+    right: 0;
+    margin-right: 10px;
 }
+
+.MenuOption.Close{
+    opacity: 0;
+}
+
+.MenuOption .content a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+
+.MenuOption .content button i{
+    width: 100%;
+    height: 100%;
+}
+
 

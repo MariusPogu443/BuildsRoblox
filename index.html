@@ -10,6 +10,8 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
         <link rel="stylesheet" href="Main.css">
         <script src="https://kit.fontawesome.com/e0ee6af32a.js" crossorigin="anonymous"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js"></script>
     </head>
 
     <body> 
@@ -36,38 +38,41 @@
                 <a href="Builds.html">Builds</a>
                 <a href="Vehicules.html">Véhicules</a>
             </div>
+            <div id="google_translate_element"></div>
         </nav>
 
-        <section class="Win-roblox">
+        <section class="MenuOption">
             <div class="content">
-                <div class="Winrar">
-                    <a href="https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-591fr.exe">
-                        <img src="ressource/winrar.png" class="imgdiv"></a>
+                <div class="TitreErreur">
+                    <p>Ce site va bientôt passer en domaine .fr</p>
                 </div>
-    
-                <div class="Roblox">
-                    <a href="https://www.roblox.com/home"><img src="ressource/ROBLOX.png" class="imgdiv"></a>
+                <div class="Button">
+                    <a class="ButtonOption"><i class="fa-solid fa-xmark"></i></a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="Outils" class="Win-roblox">
+            <div class="container">
+                <div class="Outil">
+                    <div class="Winrar">
+                        <a href="https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-591fr.exe">
+                            <img src="ressource/winrar.png" class="imgdiv"></a>
+                    </div>
+        
+                    <div class="Roblox">
+                        <a href="https://www.roblox.com/home"><img src="ressource/ROBLOX.png" class="imgdiv"></a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- <section class="ErreurSection">
-            <div class="content">
-                <div class="TitreErreur"><h1>Problème de téléchargement, Google bloque les fichier !</h1></div>
-            </div>
-        </section> -->
         <main>
             <ul class="grid-contnair">
                 <li class="profile-card">
                     <img src ="ressource/BurgerKing.jpg" alt="profil" class="profile-img">
                     <ul class="model-info">
                         <p>V1</p>
-                        <!-- <div class="like-main">
-                            <button class="like" data-id="1" type="button">
-                                    <i class="fa-solid fa-heart"></i>
-                            </button>
-                            <span class="like-counter" data-id="1">0</span>
-                        </div> -->
                     </ul>
                     <div class="profile-info">
                         <p class="profile-name">BurgerKing</p>
@@ -103,12 +108,7 @@
                 <img src ="ressource/interface.png" alt="profil" class="profile-img">
                 <ul class="model-info">
                     <p>V1.1</p>
-                    <!-- <div class="like-main">
-                        <button class="like" data-id="3" type="button">
-                                <i class="fa-solid fa-heart"></i>
-                        </button>
-                        <span class="like-counter" data-id="3">0</span>
-                    </div> -->
+
                 </ul>
                 <div class="profile-info"> 
                     <p class="profile-name">Interface</p>
@@ -123,12 +123,7 @@
                 <img src ="ressource/PORTAIL.jpg" alt="profil" class="profile-img">
                 <ul class="model-info">
                     <p>V1</p>
-                    <!-- <div class="like-main">
-                        <button class="like" data-id="4" type="button">
-                                <i class="fa-solid fa-heart"></i>
-                        </button>
-                        <span class="like-counter" data-id="4">0</span>
-                    </div> -->
+
                 </ul>
                 <div class="profile-info"> 
                     <p class="profile-name">Portail</p>
@@ -143,39 +138,27 @@
                 <img src ="ressource/Iphone.png" alt="profil" class="profile-img">
                 <ul class="model-info">
                     <p>V1</p>
-                    <p title="Nombreux bugs repérés" id="New">BUG</p>
-                    <!-- <div class="like-main">
-                        <button class="like" data-id="5" type="button">
-                                <i class="fa-solid fa-heart"></i>
-                        </button>
-                        <span class="like-counter" data-id="5">0</span>
-                    </div> -->
+                    <p title="Nombreux bugs repérés" id="New">INDISPONIBLE</p>
                 </ul>
                 <div class="profile-info"> 
                     <p class="profile-name">Iphone 14</p>
                     <p class="profile-work">mariuspogu44</p>
                     <p class="profile-Maj">Ajouter le 15 avril 2023</p>
-                    <a href="https://mega.nz/folder/dfElTTiL#_miY3UM161VEzhcRSdauaw" target="_blank">
-                        <img class="download" src="ressource/icons8-downloading-updates-windows-11-outline-70.png">
-                    </a>
+                    <img class="downloadno" src="ressource/Idontte3.png">
                 </div>
                </li>
                <li class="profile-card">
                 <img src ="ressource/lightBar.png" alt="profil" class="profile-img">
                 <ul class="model-info">
                     <p>V2</p>
-                    <p id="New">MISE A JOUR</p>
-                    <!-- <div class="like-main">
-                        <button class="like" data-id="6" type="button">
-                                <i class="fa-solid fa-heart"></i>
-                        </button>
-                        <span class="like-counter" data-id="6">0</span>
-                    </div> -->
+                    <a class="Info" href="https://discord.gg/qFseAntnxD" target="_blank">
+                        <i id="Info" class="fa-solid fa-circle-info"></i>
+                    </a>
                 </ul>
                 <div class="profile-info"> 
                     <p class="profile-name">Panel Mercura</p>
                     <p class="profile-work">mariuspogu44</p>
-                    <p class="profile-Maj">Ajouter le 17 avril 2023</p>
+                    <p class="profile-Maj">mise a jour le 04 septembre 2023</p>
                     <a href="https://mega.nz/folder/IOcEHRKA#FzXB1YQ-e7laM5PP3WhivQ" target="_blank">
                         <img class="download" src="ressource/icons8-downloading-updates-windows-11-outline-70.png">
                     </a>
@@ -227,6 +210,9 @@
                 <img src ="ressource/panneaux.png" alt="profil" class="profile-img">
                 <ul class="model-info">
                     <p>V1</p>
+                    <a class="Info" href="https://discord.gg/RwUb9JTuub" target="_blank">
+                        <i id="Info" class="fa-solid fa-circle-info"></i>
+                    </a>
                 </ul>
                 <div class="profile-info"> 
                     <p class="profile-name">Panneaux signalisations</p>
@@ -265,25 +251,10 @@
                     </a>
                 </div>
                </li>
-               <!-- <li class="profile-card">
-                <img src ="ressource/Radar.png" alt="profil" class="profile-img">
-                <ul class="model-info">
-                    <p>V1</p>
-                </ul>
-                <div class="profile-info"> 
-                    <p class="profile-name">Test</p>
-                    <p class="profile-work">mariuspogu44</p>
-                    <p class="profile-Maj">Ajouter le 25 mai 2023</p>
-                    <a href="https://www.clictune.com/ixBo" target="_blank">
-                        <img class="downloadCl" src="ressource/icons8-downloading-updates-windows-11-outline-70.png">
-                    </a>
-                </div>
-               </li> -->
                <li class="profile-card">
                 <img src ="ressource/CCF2.png" alt="profil" class="profile-img">
                 <ul class="model-info">
                     <p>V1</p>
-                    <p id="New">NOUVEAU</p>
                 </ul>
                 <div class="profile-info"> 
                     <p class="profile-name">CCF</p>
@@ -298,7 +269,6 @@
                 <img src ="ressource/Duster12.png" alt="profil" class="profile-img">
                 <ul class="model-info">
                     <p>V1</p>
-                    <p id="New">NOUVEAU</p>
                 </ul>
                 <div class="profile-info"> 
                     <p class="profile-name">Dacia Duster GN</p>
@@ -313,8 +283,10 @@
                 <img src ="ressource/IphoneV2.png" alt="profil" class="profile-img">
                 <ul class="model-info">
                     <p>V1</p>
-                    <i title="Rare" class="fa-sharp fa-solid fa-star"></i>
-                    <p id="New">NOUVEAU</p>
+                    <a class="Info" href="https://discord.gg/82GHZqfZVH" target="_blank">
+                        <i id="Info" class="fa-solid fa-circle-info"></i>
+                    </a>
+                    <i title="Légendaire" class="fa-sharp fa-solid fa-star"></i>
                 </ul>
                 <div class="profile-info"> 
                     <p class="profile-name">iPhone 14 V2</p>
@@ -329,7 +301,6 @@
                 <img src ="ressource/radoi.png" alt="profil" class="profile-img">
                 <ul class="model-info">
                     <p>V1</p>
-                    <p id="New">NOUVEAU</p>
                 </ul>
                 <div class="profile-info"> 
                     <p class="profile-name">Radio</p>
@@ -344,7 +315,6 @@
                 <img src ="ressource/csi.png" alt="profil" class="profile-img">
                 <ul class="model-info">
                     <p>V1</p>
-                    <p id="New">NOUVEAU</p>
                 </ul>
                 <div class="profile-info"> 
                     <p class="profile-name">CSI</p>
@@ -359,7 +329,6 @@
                 <img src ="ressource/tenue.png" alt="profil" class="profile-img">
                 <ul class="model-info">
                     <p>V1</p>
-                    <p id="New">NOUVEAU</p>
                 </ul>
                 <div class="profile-info"> 
                     <p class="profile-name">Tenu SP</p>
@@ -388,25 +357,247 @@
                <li class="profile-card">
                 <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
                </li>
+               <li class="profile-card">
+                <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+               </li>
+               <li class="profile-card">
+                <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+               </li>
+               <li class="profile-card">
+                <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+               </li>
+               <li class="profile-card">
+                <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+               </li>
+               <li class="profile-card">
+                <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+               </li>
+               <li class="profile-card">
+                <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+               </li>
+               <li class="profile-card">
+                <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+               </li>
+               <li class="profile-card">
+                <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+               </li>
+               <li class="profile-card">
+                <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+               </li>
+               <li class="profile-card">
+                <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+               </li>
+               <li class="profile-card">
+                <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+               </li>
+               <li class="profile-card">
+                <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+               </li>
+               <li class="profile-card">
+                <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+               </li>
+               <li class="profile-card">
+                <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+               </li>
+               <li class="profile-card">
+                <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+               </li>
+               <li class="profile-card">
+                <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+               </li>
+               <li class="profile-card">
+                <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+               </li>
+               <li class="profile-card">
+                <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+               </li>
+               <li class="profile-card">
+                <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+               </li>
+               <li class="profile-card">
+                <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+               </li>
+               <li class="profile-card">
+                <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+               </li>
+               <li class="profile-card">
+                <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+               </li>
+               <li class="profile-card">
+                <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+               </li>
+               <li class="profile-card">
+                <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+               </li>
+               <li class="profile-card">
+                <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+               </li>
+               <li class="profile-card">
+                <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+               </li>
+               <li class="profile-card">
+                <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+               </li>
+               <li class="profile-card">
+                <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+               </li>
+               <li class="profile-card">
+                <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+               </li>
+               <li class="profile-card">
+                <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+               </li>
+               
             </ul>
         </main>
+
+        <!-- <section class="PageTurn">
+            <div class="container">
+                <div class="ListePage">
+                    <ul>
+                        <li class="btn prev"><span><i class="fa-solid fa-angle-left"></i> Préc</span></li>
+                        <li class="numb"><span>1</span></li>
+                        <li class="numb"><span>2</span></li>
+                        <li class="dots"><span>...</span></li>
+                        <li class="numb"><span>3</span></li>
+                        <li class="numb activer"><span>4</span></li>
+                        <li class="dots"><span>...</span></li>
+                        <li class="numb"><span>7</span></li>
+                        <li class="btn next"><span>Suiv <i class="fa-solid fa-angle-right"></i></span></li> 
+                    </ul>
+                </div>
+            </div>
+        </section> -->
+
+        <section class="Partenaria">
+            <div id="partenaria" class="container">
+                <div class="Discord">
+                    <div class="DiscordPartenaire" id="IRS">
+                        <a href="https://discord.gg/E5VUsAbFXB" target="">
+                            <img src="ressource/IRS7.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="button-up">
+            <div class="Button">
+                <a href="#"><i class="fa-sharp fa-solid fa-arrow-up"></i></a>
+            </div>
+
+        </div>
 
     <section class="section-demande">
         <div class="container">
             <div class="content">
                 <p class="title">
-                    Venez tester <strong>les models en test</strong> sur notre map roblox.
+                    <strong>Venez nous aider</strong> à tester les prochains modèles <br> disponible.
                 </p>
                 <p>
-                    Derrière chaque utilisateur se cachent des critiques qui pourraient nous faire avancer sur nos prochains modèles.
+                    Venez nous aider à tester les prochains modèles disponibles de BuildStore.
+                    <br>
+                    Ensemble, nous façonnons le futur du roleplay de Roblox.
                 </p>
 
                 <a href="https://www.roblox.com/games/9942063946/" class="button_demande">Visiter la map</a>
             </div>
+            <div class="ImageDemande">
+                <img src="ressource/demande.png" alt="">
+            </div>
         </div>
+        
     </section>
 
+    <!-- <section>
+        <button id="telecharger">Télécharger</button>
+        <p>Nombre de vues : <span id="nombre-vues">0</span></p>
+    </section> -->
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+              <h2>BuildStore</h2>
+              <p class="Description">Site web de modèles gratuits pour vos serveurs Roblox.</p>
+            </div>
+            <div class="footer-section links">
+              <h3>Liens Rapides</h3>
+              <ul>
+                <li><a class="ButtonLien" href="#">Accueil</a></li>
+                <li><a class="ButtonLien" href="https://discord.gg/q5uxaYNttv">Aide</a></li>
+                <li><a class="ButtonLien" href="#Outils">Outils</a></li>
+              </ul>
+            </div>
+            <div class="footer-section contact">
+              <h3>Contact</h3>
+              <p><i class="fas fa-envelope"></i><a href="mailto:buildsstore@gmail.com">storebuilde@gmail.com</a>
+              <p><i class="fa-brands fa-discord"></i> mariuspogu44#6433</p>
+              <p><i class="fa-solid fa-file-invoice"></i><a href="https://vbzg1ow7lze.typeform.com/to/YR10xWiN">demande de models</a></p>
+            </div>
+            <div class="footer-section social">
+              <h3>Nous Suivre</h3>
+              <a href="https://www.youtube.com/channel/UCz2hRsVbznk-hRgCi58o1Xg" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+              <a href="https://twitter.com/BuildeS80621/with_replies" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="discord.gg/2B3eVnqhwS"><i class="fa-brands fa-discord"></i></a>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            &copy; 2023 BuildStore | mariuspogu44
+          </div>
+    </footer>
+
+    
+
         <script src="script.js"></script>
+
+        <script>
+
+        // import { initializeApp } from "firebase/app";
+        // import { getAnalytics } from "firebase/analytics";
+
+        //     const firebaseConfig = {
+        //         apiKey: "AIzaSyA-UWTY--f-Djc5Wha-XX9HckKK9SG7hrc",
+        //         authDomain: "viewdownload-521ca.firebaseapp.com",
+        //         projectId: "viewdownload-521ca",
+        //         storageBucket: "viewdownload-521ca.appspot.com",
+        //         messagingSenderId: "737521556764",
+        //         appId: "1:737521556764:web:2dde9deaf4a4c7ad9eeed9",
+        //         measurementId: "G-57Y7GB6WE2"
+        //     };
+
+        //     const app = initializeApp(firebaseConfig);
+        //     const analytics = getAnalytics(app);
+
+        //     firebase.initializeApp(firebaseConfig);
+
+        //     const db = firebase.firestore();
+
+        //     const nombreVuesElement = document.getElementById("nombre-vues");
+
+        //     // Référence à l'élément HTML du bouton Télécharger
+        //     const telechargerButton = document.getElementById("telecharger");
+
+        //     const vuesRef = db.collection("vues").doc("document_unique");
+
+        //     telechargerButton.addEventListener("click", function () {
+        //         vuesRef.update({ nombre: firebase.firestore.FieldValue.increment(1) });
+        //     });
+
+        //     vuesRef.onSnapshot(function (doc) {
+        //         if (doc.exists) {
+        //             const nombreVues = doc.data().nombre;
+        //         nombreVuesElement.textContent = nombreVues;
+        //         } else {
+        //      console.log("Le document n'existe pas.");
+        //         }
+        //     });
+
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({pageLanguage: 'fr'},
+               'google_translate_element');
+            }
+        </script>
+        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         
     </body>
 </html>
