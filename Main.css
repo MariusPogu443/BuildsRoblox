@@ -10,10 +10,12 @@
 
 body::-webkit-scrollbar{
     width: 10px;
+    background: #30302e;
+    box-shadow: inset 1px 0px 0px #383836;
 }
 
 body::-webkit-scrollbar-thumb{
-    background-color: #383836;
+    background-color: #464643;
     border-radius:2px;
 }
 body::-webkit-scrollbar-corner{
@@ -22,7 +24,7 @@ body::-webkit-scrollbar-corner{
 }
 
 body::-webkit-scrollbar-thumb:hover{
-    background-color: #464643;
+    background-color: #575753;
 }
 
 
@@ -71,7 +73,7 @@ nav {
     padding: 15px 25px;
     background: transparent;
     box-shadow: inset 0px -1px 0px #383836;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 nav.sticky{
