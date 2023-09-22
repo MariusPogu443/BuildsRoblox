@@ -30,16 +30,9 @@ const toggleNav = e => {
 hamburgertoggler.addEventListener("click",
 toggleNav);
 
-const SectionOption = document.querySelector(".MenuOption");
-const BtnOption = document.querySelector(".ButtonOption");
 
-const ToggleSection = e => {
-    SectionOption.classList.add('Close')
-};
-
-
-BtnOption.addEventListener("click",
-ToggleSection);
+// BtnOption.addEventListener("click",
+// ToggleSection);
 
 // new ResizeObserver(entries => {
 //     if(entries[0].contentRect.width <= 900){
@@ -49,6 +42,16 @@ ToggleSection);
 //     }
 // }).observe(document.body);
 
+// Affiche
+
+
+// const SectionOption = document.querySelector(".MenuOption");
+// const BtnOption = document.querySelector(".ButtonOption");
+
+// const ToggleSection = e => {
+//     SectionOption.classList.add('Close')
+// };
+
 // Nav Bar annimation scroll
 
 document.addEventListener('scroll', () => {
@@ -56,15 +59,17 @@ document.addEventListener('scroll', () => {
     const Button = document.querySelector('.button-up');
     if (window.scrollY > 0) {
         nav.classList.add('sticky');
-        SectionOption.classList.add('sticky')
+        // SectionOption.classList.add('sticky')
         Button.classList.add('Open');
     }else{
         nav.classList.remove('sticky');
-        SectionOption.classList.remove('sticky')
+        // SectionOption.classList.remove('sticky')
         Button.classList.remove('Open');
     }
  
 });
+
+
 
 // Pagination
 
