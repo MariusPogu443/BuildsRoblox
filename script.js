@@ -1,3 +1,90 @@
+// ChargementLoad
+
+
+window.addEventListener('load', () => {
+    document.querySelector('nav').classList.add('Loader')
+})
+
+
+// var donnees = [
+//     { libelle: "DusterGN", lien: "https://mega.nz/folder/ceMSlJZT#Jwna3jtf4qqjBPGbHkwzQw" },
+//     { libelle: "Résultat 2", lien: "https://lien2.com" },
+//     { libelle: "Résultat 3", lien: "https://lien3.com" },
+// ];
+
+// var champRecherche = document.getElementById("recherche");
+// var zoneResultats = document.getElementById("resultats");
+// var zoneResultatsContnaire = document.getElementById("contnaire-resulta");
+
+// function afficherResultats(recherche) {
+//     // Réinitialise la zone des résultats
+//     zoneResultats.innerHTML = "";
+  
+//     // Vérifie si la recherche est vide
+//     if (recherche.trim() === "") {
+//       // Si la recherche est vide, masque la zone des résultats
+//       zoneResultatsContnaire.style.display = "none";
+//     } else {
+//       // Parcourt les données pour trouver des correspondances
+//       for (var i = 0; i < donnees.length; i++) {
+//         var resultat = donnees[i];
+  
+//         if (resultat.libelle.toLowerCase().includes(recherche.toLowerCase())) {
+//           var lien = document.createElement("a");
+//           lien.href = resultat.lien;
+//           lien.textContent = resultat.libelle;
+  
+//           zoneResultats.appendChild(lien);
+//           zoneResultats.appendChild(document.createElement("br"));
+//         }
+//       }
+  
+//       // Affiche la zone des résultats s'il y a des résultats
+//       if (zoneResultats.childElementCount > 0) {
+//         zoneResultatsContnaire.style.display = "block";
+//       } else {
+//         // Masque la zone des résultats si aucun résultat n'est trouvé
+//         zoneResultatsContnaire.style.display = "none";
+//       }
+//     }
+//   }
+
+// // Ajoute un gestionnaire d'événements pour la saisie dans le champ de recherche
+// champRecherche.addEventListener("input", function () {
+//   var recherche = champRecherche.value;
+//   afficherResultats(recherche);
+// });
+
+// const searchBox = document.querySelector(".contnairSearch");
+// const navlinks = document.querySelector(".navlinks-container");
+// const resultalinks = document.querySelector(".contnaire-resulta");
+// const CloseTextBox = document.getElementById("CloseTextBox");
+// const OpenTextBox = document.getElementById("OpenTextBox");
+
+// OpenTextBox.addEventListener("click", function () {
+//     // Vérifie si la div est actuellement affichée
+//     if (searchBox.style.display === "none" || searchBox.style.display === "") {
+//       // Si la div est cachée, affiche-la
+//       searchBox.style.display = "flex";
+//       CloseTextBox.style.display = "flex";
+//       OpenTextBox.style.display = "none";
+//       navlinks.style.display = "none";
+//       resultalinks.style.display = "none";
+//     }
+// });
+
+// CloseTextBox.addEventListener("click", function () {
+//     // Vérifie si la div est actuellement affichée
+//     if (searchBox.style.display === "flex") {
+//       // Si la div est cachée, affiche-la
+//       searchBox.style.display = "none";
+//       CloseTextBox.style.display = "none";
+//       OpenTextBox.style.display = "flex";
+//       navlinks.style.display = "flex";
+//     }
+// });
+
+
 // TranslateGoogle
 
 function googleTranslateElementInit(){
@@ -7,12 +94,6 @@ function googleTranslateElementInit(){
     );
 };
 
-// ChargementLoad
-
-
-window.addEventListener('load', () => {
-    document.querySelector('nav').classList.add('Loader')
-})
 
 // Menu deroulant
 
@@ -31,26 +112,18 @@ hamburgertoggler.addEventListener("click",
 toggleNav);
 
 
-// BtnOption.addEventListener("click",
-// ToggleSection);
-
-// new ResizeObserver(entries => {
-//     if(entries[0].contentRect.width <= 900){
-//         navLinksContainer.style.transition = "transform 0.3s ease-out";
-//     }else {
-//         navLinksContainer.style.transition = "none";
-//     }
-// }).observe(document.body);
-
 // Affiche
 
 
-// const SectionOption = document.querySelector(".MenuOption");
-// const BtnOption = document.querySelector(".ButtonOption");
+const SectionOption = document.querySelector(".MenuOption");
+const BtnOption = document.querySelector(".ButtonOption");
 
-// const ToggleSection = e => {
-//     SectionOption.classList.add('Close')
-// };
+const ToggleSection = e => {
+    SectionOption.classList.add('Close')
+};
+
+BtnOption.addEventListener("click",
+ToggleSection);
 
 // Nav Bar annimation scroll
 
@@ -59,16 +132,15 @@ document.addEventListener('scroll', () => {
     const Button = document.querySelector('.button-up');
     if (window.scrollY > 0) {
         nav.classList.add('sticky');
-        // SectionOption.classList.add('sticky')
+        SectionOption.classList.add('sticky')
         Button.classList.add('Open');
     }else{
         nav.classList.remove('sticky');
-        // SectionOption.classList.remove('sticky')
+        SectionOption.classList.remove('sticky')
         Button.classList.remove('Open');
     }
  
 });
-
 
 
 // Pagination
@@ -134,3 +206,6 @@ function element(totalPages, page){
 };
 
 element(totalPages, 1);
+
+// Search
+
