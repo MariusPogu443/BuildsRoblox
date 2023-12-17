@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="fr-fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demande de model | Buildstore</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="ressource/logo.png" type="images/png" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="Main.css">
+    <script src="https://kit.fontawesome.com/e0ee6af32a.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="body_demande">
+    <main>
+        <section class="Logo">
+            <a href="index.html" class="nav-icon" aria-label="visit homepage" aria-current="page">
+            <img id="LOGOS" src="ressource/logo.png" alt="buildstore icon">
+            <span>BuildStore</span>
+            </a>
+        </section>
+
+        <section class="Form-Envoyer">
+            <h2>Votre demande de modèle personnalisé a bien été envoyée.</h2>
+            <div class="button-demande-div">
+                <a href="/index.html" class="button_demande">Retourner sur le site</a>
+            </div>
+        </section>
+
+        <section class="Form-Demande">
+            <span class="titrespan"><a href="/index.html"><i class="fa-solid fa-chevron-left"></i></a>Faire une demande</span>
+            <p>* Indique une question obligatoire</p>
+            <div class="contnair-Form-Demande">
+                <form class="Forms" novalidate>
+                    <div class="intput-form-div">
+                        <div class="intput-form">
+                            <input type="text" data-intput-id="Pseudo" id="pseduo" name="nom" class="intput-textbox" placeholder="Votre pseudo discord avec htag" required>
+                            <i class="fa-brands fa-discord" title="mariuspogu44#6433"></i>
+                        </div>
+                        <div class="span_erreur" data-intput-id="Pseudo">
+                            <span class="fleche-haut">
+                                <i class="fa-sharp fa-solid fa-caret-up"></i>
+                            </span>
+                            Veuillez metre votre pseudo discord.
+                        </div>
+                    </div>
+                    
+
+                    <div class="CheckBox">
+                        <div class="label">
+                            <label>Quel Types de creations <span> *</span></label>
+                            <div class="choixdiv">
+                                <div class="choix">
+                                    <label><input class="radio" type="radio" name="selectcreation" value="Gui" required><div class="radio-box"></div> Gui</label>
+                                </div>
+                            </div>
+                            <div class="choixdiv">
+                                <div class="choix">
+                                    <label><input class="radio" type="radio" name="selectcreation" value="Build" required><div class="radio-box"></div> Build</label>
+                                </div>
+                            </div>
+                            <div class="choixdiv">
+                                <div class="choix">
+                                    <label><input class="radio" type="radio" name="selectcreation" value="Script" required><div class="radio-box"></div> Script</label>
+                                </div>
+                            </div>
+                            <div class="choixdiv">
+                                <div class="choix">
+                                    <label><input class="radio" type="radio" name="selectcreation" value="Vehicule" required><div class="radio-box"></div> Vehicule</label>
+                                </div>
+                            </div>
+                            <div class="choixdiv">
+                                <div class="choix">
+                                    <label><input class="radio" type="radio" name="selectcreation" value="Autre" required><div class="radio-box"></div> Autre</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="span_erreur" data-intput-id="selectcreation">
+                            <span class="fleche-haut">
+                                <i class="fa-sharp fa-solid fa-caret-up"></i>
+                            </span>
+                            Veuillez sélectionner une réponse.
+                        </div>
+                    </div>
+
+                    <div class="CheckBox">
+                        <div class="label">
+                            <label>Cette creations est pour... <span> *</span></label>
+                            <div class="choixdiv">
+                                <div class="choix">
+                                    <label><input class="radio" type="radio" name="selectcreationqui" value="Mon serveur" required><div class="radio-box"></div> Mon serveur</label>
+                                </div>
+                            </div>
+                            <div class="choixdiv">
+                                <div class="choix">
+                                    <label><input class="radio" type="radio" name="selectcreationqui" value="Mon besoin personnel" required><div class="radio-box"></div> Mon besoin personnel</label>
+                                </div>
+                            </div>
+                            <div class="choixdiv">
+                                <div class="choix">
+                                    <label><input class="radio" type="radio" name="selectcreationqui" value="pour un ami" required><div class="radio-box"></div> Pour un ami</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="span_erreur" data-intput-id="selectcreationqui">
+                            <span class="fleche-haut">
+                                <i class="fa-sharp fa-solid fa-caret-up"></i>
+                            </span>
+                            Veuillez sélectionner une réponse.
+                        </div>
+                    </div>
+
+                    <div class="CheckBox">
+                        <div class="label">
+                            <label>Acceptez-vous que votre modèle soit publié sur le site ? <span> *</span></label>
+                            <div class="choixdiv">
+                                <div class="choix">
+                                    <label><input class="radio" type="radio" name="selectsite" value="Oui" required><div class="radio-box"></div> Oui</label>
+                                </div>
+                            </div>
+                            <div class="choixdiv">
+                                <div class="choix">
+                                    <label><input class="radio" type="radio" name="selectsite" value="Non" required><div class="radio-box"></div> Non</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="span_erreur" data-intput-id="selectsite">
+                            <span class="fleche-haut">
+                                <i class="fa-sharp fa-solid fa-caret-up"></i>
+                            </span>
+                            Veuillez sélectionner une réponse.
+                        </div>
+                    </div>
+
+                    <div class="intput-form-div">
+                        <div class="intput-form">
+                            <input type="text" data-intput-id="Description" name="Description" id="Description" class="intput-textbox" placeholder="Décriver votre demande" required>
+                            <i class="fa-solid fa-file-lines"></i>
+                        </div>
+                        <div class="span_erreur" data-intput-id="Description">
+                            <span class="fleche-haut">
+                                <i class="fa-sharp fa-solid fa-caret-up"></i>
+                            </span>
+                            Veuillez preciser votre demande.
+                        </div>
+                    </div>
+
+                    <div class="Btndiv">
+                        <button type="submit" class="Btn-Envoyer">Envoyer</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </section>
+    </main>
+
+
+    <script type="module" src="Firebase_demande.js"></script>
+</body>
+
+</html>

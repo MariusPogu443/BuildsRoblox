@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "@mapbox/node-pre-gyp": "^1.0.11",
+    "dotenv": "^16.3.1",
+    "firebase": "^10.5.0",
+    "uuid": "^9.0.1"
+  },
+  "name": "buildstorev3",
+  "version": "1.0.0",
+  "main": "FireBase.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MariusPogu443/BuildsRoblox.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MariusPogu443/BuildsRoblox/issues"
+  },
+  "homepage": "https://github.com/MariusPogu443/BuildsRoblox#readme",
+  "description": ""
+}
