@@ -111,35 +111,56 @@ const resultalinks = document.querySelector(".contnaire-resulta");
 const CloseTextBox = document.getElementById("CloseTextBox");
 const OpenTextBox = document.getElementById("OpenTextBox");
 var TextBoxsearchBox = document.querySelector('.search-textbox');
+const hamburgertoggler = document.querySelector(".hamburger");
+const navLinksContainer = document.querySelector(".navlinks-container");
+const TitreSite = document.querySelector(".LogoText");
 
 OpenTextBox.addEventListener("click", function () {
     // Vérifie si la div est actuellement affichée
     if (searchBox.style.display === "none" || searchBox.style.display === "") {
-      // Si la div est cachée, affiche-la
+      if (window.innerWidth <= 900){
+        hamburgertoggler.style.display= "none";
+        searchBox.style.display = "flex";
+        CloseTextBox.style.display = "flex";
+        OpenTextBox.style.display = "none";
+        navlinks.style.display = "none";
+        resultalinks.style.display = "none";
+        TitreSite.style.display = "none";
+        TextBoxsearchBox.style.borderRadius = "10px 10px 10px 10px";
+      }else{
+        // Si la div est cachée, affiche-la
       searchBox.style.display = "flex";
       CloseTextBox.style.display = "flex";
       OpenTextBox.style.display = "none";
       navlinks.style.display = "none";
       resultalinks.style.display = "none";
       TextBoxsearchBox.style.borderRadius = "10px 10px 10px 10px";
+      }
     }
 });
 
 CloseTextBox.addEventListener("click", function () {
-    // Vérifie si la div est actuellement affichée
-    if (searchBox.style.display === "flex") {
+  if (searchBox.style.display === "flex") {
+    if (window.innerWidth <= 900){
+      hamburgertoggler.style.display= "flex";
+      searchBox.style.display = "none";
+      CloseTextBox.style.display = "none";
+      OpenTextBox.style.display = "flex";
+      navlinks.style.display = "flex";
+      resultalinks.style.display = "none";
+      TitreSite.style.display = "flex";
+      TextBoxsearchBox.style.borderRadius = "10px 10px 10px 10px";
+    }else{
       // Si la div est cachée, affiche-la
       searchBox.style.display = "none";
       CloseTextBox.style.display = "none";
       OpenTextBox.style.display = "flex";
       navlinks.style.display = "flex";
     }
+  }
 });
 
 // Menu deroulant
-
-const hamburgertoggler = document.querySelector(".hamburger");
-const navLinksContainer = document.querySelector(".navlinks-container");
 
 const toggleNav = e => {
     hamburgertoggler.classList.toggle("open")
