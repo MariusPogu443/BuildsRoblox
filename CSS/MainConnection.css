@@ -1,0 +1,249 @@
+/* ----------------------------- /// PAGE DEMANDE /// ----------------------------- */
+
+/* ----------------------------- FORMULAIRE DEMANDE ----------------------------- */
+
+/* ------ FORM STYLE ------ */
+
+.Form-Demande .titrespan{
+    margin-bottom: 25px;
+    padding: 20px 5%;
+    background: #D00000;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    font-size: 18px;
+    display: inline-block;
+    width: 100%;
+}
+
+.Form-Demande .titrespan i{
+    color: white;
+    margin-right: 20px;
+    font-size: 15px;
+}
+
+.Form-Demande p{
+    text-align: center;
+    font-size: 12px;
+    color: #D00000;
+}
+
+
+.Form-Demande{
+    margin-bottom: 40px;
+    background-color: rgba(53, 53, 52, 0.365);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    width: 420px;
+    box-shadow: 0 0 10px rgba(53, 53, 52, 0.365);
+    color: white;
+
+}
+
+.contnair-Form-Demande .CheckBox .label span{
+    color: #d00000;
+    margin-left: 10px;
+}
+
+
+.contnair-Form-Demande{
+    padding: 10px 40px;
+}
+
+.contnair-Form-Demande .intput-form{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin: 20px 0;
+}
+
+/* ------ FORM ERROR ------ */
+
+.span_erreur{
+    background-color: #D00000;
+    position: relative;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 16px;
+    display: none;
+}
+
+.span_erreur .fleche-haut{
+    position: absolute;
+    transform: translateY(-30px);
+    color: #D00000;
+    font-size: 30px;
+}
+
+/* ------ TEXTBOX FORM ------ */
+
+::-webkit-input-placeholder{
+    color: white;
+    font-weight: 200;
+    font-family: Montserrat, sans-serif;
+}
+
+.intput-form{
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    color: white;
+}
+
+.intput-form p{
+    color: white;
+    margin-top: 5px;
+}
+
+input[type="password"]:is(:focus), input[type="email"]:is(:focus), input[type="text"]:is(:focus){
+    box-shadow: #ffffff 0 2px 0 0;
+}
+
+
+.intput-form input{
+    transition: all 0.1s ease-in-out;
+    font-family: Montserrat, sans-serif;
+    width: 100%;
+    height: 50%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 10px;
+    color: white;
+    background-color: #363636;
+    padding: 20px 55px 20px 15px;
+}
+
+.intput-form i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.intput-form input::placeholder{
+    color: white;
+}
+
+
+/* ------ BUTTON FORM ------ */
+
+.Btn-Envoyer:hover{
+    transform: scale(1.05);
+}
+
+.Btn-Envoyer{
+    display: block;
+    justify-self: center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    background-color: #D00000;
+    border: none;
+    color: white;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+    margin-top: 25px;
+}
+
+.Btndiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ------ BODY PAGE DEMANDE ------ */
+
+.body_demande{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.body_demande main .Logo{
+    display: flex;
+    margin: 80px 0;
+    justify-content: center;
+}
+
+/* ------ ACCOUNT CREAT BTN ------ */
+
+.btn_new_account{
+    width: 100%;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-bottom: 80px;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.btn_new_account a{
+    color: #D00000;
+    text-decoration: none;
+}
+
+/* ------ Checkbox ------ */
+
+.checkbox p{
+    font-weight: 400;
+    font-size: 14px;
+    color: white;
+    margin-left: 10px;
+}
+
+.checkbox{
+    align-items: center;
+    display: flex;
+    margin-top: 20px;
+}
+
+.checkbox input[type="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.checkbox input[type="checkbox"]::after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00c";
+    font-size: 11px;
+    color: #D00000;
+    display: none;
+}
+
+.checkbox input[type="checkbox"]:hover{
+    border: 2px solid #d00000;
+}
+
+.checkbox input[type="checkbox"]:checked{
+    border: 2px solid #d00000;
+}
+
+.checkbox input[type="checkbox"]:checked::after{
+    display: block;
+}
+
+
+
+
+

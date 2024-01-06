@@ -17,7 +17,7 @@ const db = getFirestore(app);
 
 // Recherche Bar
 
-import donnees from './datasearch.js';
+import donnees from '../datasearch.js';
 
 var champRecherche = document.getElementById("recherche");
 var zoneResultats = document.getElementById("resultats");

@@ -7,17 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Demande de model | Buildstore</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" href="ressource/logo.png" type="images/png" />
+    <link rel="shortcut icon" href="../ressource/logo.png" type="images/png" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
-    <link rel="stylesheet" href="Main.css">
+    <link rel="stylesheet" href="../CSS/MainDemande.css">
+    <link rel="stylesheet" href="../CSS/Main.css">
     <script src="https://kit.fontawesome.com/e0ee6af32a.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="body_demande">
     <main>
         <section class="Logo">
-            <a href="index.html" class="nav-icon" aria-label="visit homepage" aria-current="page">
-            <img id="LOGOS" src="ressource/logonoel.png" alt="buildstore icon">
+            <a href="../index.html" class="nav-icon" aria-label="visit homepage" aria-current="page">
+            <img id="LOGOS" src="../ressource/logo.png" alt="buildstore icon">
             <span>BuildStore</span>
             </a>
         </section>
@@ -25,7 +26,7 @@
         <section class="Form-Envoyer">
             <h2>Votre demande de modèle personnalisé a bien été envoyée.</h2>
             <div class="button-demande-div">
-                <a href="/index.html" class="button_demande">Retourner sur le site</a>
+                <a href="../index.html" class="button_demande">Retourner sur la page d'acceuil</a>
             </div>
         </section>
 
@@ -36,7 +37,7 @@
                 <form class="Forms" novalidate>
                     <div class="intput-form-div">
                         <div class="intput-form">
-                            <input type="text" data-intput-id="Pseudo" id="pseduo" name="nom" class="intput-textbox" placeholder="Votre pseudo discord avec htag" required>
+                            <input autocomplete="off" type="text" data-intput-id="Pseudo" id="pseduo" name="nom" class="intput-textbox" placeholder="Votre pseudo discord avec htag" required>
                             <i class="fa-brands fa-discord" title="mariuspogu44#6433"></i>
                         </div>
                         <div class="span_erreur" data-intput-id="Pseudo">
@@ -44,6 +45,13 @@
                                 <i class="fa-sharp fa-solid fa-caret-up"></i>
                             </span>
                             Veuillez metre votre pseudo discord.
+                        </div>
+
+                        <div class="span_erreur" data-intput-id="Pseudo" id="pseudoerror">
+                            <span class="fleche-haut">
+                                <i class="fa-sharp fa-solid fa-caret-up"></i>
+                            </span>
+                            Veuillez metre votre # discord.
                         </div>
                     </div>
                     
@@ -55,12 +63,12 @@
                                 <div class="choix">
                                     <label><input class="radio" type="radio" name="selectcreation" value="Gui" required><div class="radio-box"></div> Gui</label>
                                 </div>
-                            </div>
+                            </div>  
                             <div class="choixdiv">
                                 <div class="choix">
                                     <label><input class="radio" type="radio" name="selectcreation" value="Build" required><div class="radio-box"></div> Build</label>
                                 </div>
-                            </div>
+                            </div>                            
                             <div class="choixdiv">
                                 <div class="choix">
                                     <label><input class="radio" type="radio" name="selectcreation" value="Script" required><div class="radio-box"></div> Script</label>
@@ -139,14 +147,26 @@
 
                     <div class="intput-form-div">
                         <div class="intput-form">
-                            <input type="text" data-intput-id="Description" name="Description" id="Description" class="intput-textbox" placeholder="Décriver votre demande" required>
+                            <textarea name="Description" id="Description" class="textarea-textbox" placeholder="Décriver votre demande" required></textarea>
+                            <p>Appuyez sur <b>Entrée ↵</b> afin d'ajouter un paragraphe</p>
                             <i class="fa-solid fa-file-lines"></i>
                         </div>
-                        <div class="span_erreur" data-intput-id="Description">
+                        <div class="span_erreur" id="error_description">
                             <span class="fleche-haut">
                                 <i class="fa-sharp fa-solid fa-caret-up"></i>
                             </span>
-                            Veuillez preciser votre demande.
+                            Veuillez préciser votre demande. 20 caractères minimum.
+                        </div>
+                    </div>
+
+                    <div class="UploadImage">
+                        <label>Voulez-vous ajouter des images pour illustrer votre demande ?</label>
+                        <div class="DivFile">
+                            <label for="fileInput"><i class="fa-solid fa-upload"></i>&nbsp Importer une image</label>
+                            <input type="file" id="fileInput" accept="image/*" multiple>
+                        </div>
+                        <p class="titre-image">Aucun fichier sélectionné</p>
+                        <div id="imagePreview">
                         </div>
                     </div>
 
@@ -159,8 +179,8 @@
         </section>
     </main>
 
-
-    <script type="module" src="Firebase_demande.js"></script>
+    <script type="module" src="../JavaScript/FireBase/Firebase_demande.js"></script>
+    <script src="../JavaScript/scriptdemande.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="fr-fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Connexion | Buildstore</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="../ressource/logo.png" type="images/png" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="../CSS/MainConnection.css">
+    <link rel="stylesheet" href="../CSS/Main.css">
+    <script src="https://kit.fontawesome.com/e0ee6af32a.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="body_demande">
+    <main>
+        <section class="Logo">
+            <a href="../index.html" class="nav-icon" aria-label="visit homepage" aria-current="page">
+            <img id="LOGOS" src="../ressource/logonoel.png" alt="buildstore icon">
+            <span>BuildStore</span>
+            </a>
+        </section>
+
+        <section class="Form-Demande Connexion">
+            <span class="titrespan"><a href="../index.html"><i class="fa-solid fa-chevron-left"></i></a>Se connecter</span>
+            <div class="contnair-Form-Demande">
+
+                <div class="span_erreur" id="error_login">
+                    Veuillez saisir votre adresse e-mail
+                </div>
+
+                <form class="Forms" novalidate>
+                    <div class="intput-form-div">
+                        <div class="intput-form">
+                            <input autocomplete="off" type="email" data-intput-id="Email" id="Email_Connexion" name="Email" class="intput-textbox" placeholder="Adresse mail" required>
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="span_erreur" data-intput-id="Email">
+                            <span class="fleche-haut">
+                                <i class="fa-sharp fa-solid fa-caret-up"></i>
+                            </span>
+                            Veuillez saisir votre adresse e-mail
+                        </div>
+                    </div>
+
+                    <div class="intput-form-div">
+                        <div class="intput-form">
+                            <input autocomplete="off" type="password" data-intput-id="Password" id="Password_Connexion" name="Password" class="intput-textbox" placeholder="Mot de passe" required>
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                        <div class="span_erreur" data-intput-id="Password">
+                            <span class="fleche-haut">
+                                <i class="fa-sharp fa-solid fa-caret-up"></i>
+                            </span>
+                            Veuillez saisir votre Mot de passe
+                        </div>
+                    </div>
+
+                    <div class="checkbox">
+                        <span></span>
+                        <input type="checkbox" name="SeSouvenir" id="SeSouvenir">
+                        <p>Se souvenir de moi</p>
+                    </div>
+
+                    <div class="Btndiv">
+                        <button type="submit" id="Connection_Btn" class="Btn-Envoyer">Se connecter</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </section>
+
+        <div class="btn_new_account">
+            Pas de compte ?
+            <a href="Inscription.html">&nbsp Créer un compte</a>
+        </div>
+    
+    </main>
+    <script type="module" src="../JavaScript/FireBase/DataAuth.js"></script>
+</body>
+
+</html>

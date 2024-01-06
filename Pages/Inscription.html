@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="fr-fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inscription | Buildstore</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="../ressource/logo.png" type="images/png" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="../CSS/MainConnection.css">
+    <link rel="stylesheet" href="../CSS/Main.css">
+    <script src="https://kit.fontawesome.com/e0ee6af32a.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="body_demande">
+    <main>
+        <section class="Logo">
+            <a href="../index.html" class="nav-icon" aria-label="visit homepage" aria-current="page">
+            <img id="LOGOS" src="../ressource/logonoel.png" alt="buildstore icon">
+            <span>BuildStore</span>
+            </a>
+        </section>
+
+        <section class="Form-Demande Inscription">
+            <span class="titrespan"><a href="../index.html"><i class="fa-solid fa-chevron-left"></i></a>Créer un compte</span>
+            <div class="contnair-Form-Demande">
+                <form class="Forms" novalidate>
+
+                    <div class="intput-form-div">
+                        <div class="intput-form">
+                            <input autocomplete="off" type="text" data-intput-id="Pseudo" id="Pseudo" name="Pseudo" class="intput-textbox" placeholder="Pseudo" required>
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="span_erreur" data-intput-id="Pseudo">
+                            <span class="fleche-haut">
+                                <i class="fa-sharp fa-solid fa-caret-up"></i>
+                            </span>
+                            Pseudo obligatoire
+                        </div>
+                    </div>
+
+                    <div class="intput-form-div">
+                        <div class="intput-form">
+                            <input autocomplete="off" type="email" data-intput-id="Email" id="Email" name="Email" class="intput-textbox" placeholder="Adresse mail" required>
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="span_erreur" data-intput-id="Email">
+                            <span class="fleche-haut">
+                                <i class="fa-sharp fa-solid fa-caret-up"></i>
+                            </span>
+                            Adresse e-mail obligatoire
+                        </div>
+                    </div>
+
+                    <div class="intput-form-div">
+                        <div class="intput-form">
+                            <input autocomplete="off" type="password" data-intput-id="Password" id="Password" name="Password" class="intput-textbox" placeholder="Mot de passe" required>
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                        <div class="span_erreur" data-intput-id="Password">
+                            <span class="fleche-haut">
+                                <i class="fa-sharp fa-solid fa-caret-up"></i>
+                            </span>
+                           Mot de passe obligatoire
+                        </div>
+                    </div>
+
+                    <div class="intput-form-div">
+                        <div class="intput-form">
+                            <input type="password" data-intput-id="PasswordVerify" id="PasswordVerify" name="PasswordVerify" class="intput-textbox" placeholder="Confirmer le Mot de passe" required>
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                        <div class="span_erreur" data-intput-id="PasswordVerify">
+                            <span class="fleche-haut">
+                                <i class="fa-sharp fa-solid fa-caret-up"></i>
+                            </span>
+                            Confirmation de votre Mot de passe obligatoire
+                        </div>
+                    </div>
+
+                    <div class="Btndiv">
+                        <button type="submit" id="Inscription_Btn" class="Btn-Envoyer">S'inscrire</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </section>
+
+        <div class="btn_new_account">
+            Vous avez déjà un compte ?
+            <a href="Connection.html">&nbsp Se connecter</a>
+        </div>
+    
+    </main>
+    <script type="module" src="../JavaScript/FireBase/DataAuth.js"></script>
+</body>
+
+</html>
