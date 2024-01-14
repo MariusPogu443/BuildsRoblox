@@ -22,6 +22,8 @@ var donnees = [
     { libelle: "Peugeot 5008 PN", lien: "https://mega.nz/folder/9DsEnYjL#osR4DfZZbgysUVI5zZuRUQ", icon: "fa-solid fa-car", data_image_id: "image21"},
     { libelle: "Système Parking", lien: "https://mega.nz/folder/pKk0XYrb#OKPam7khymbe3BWLvl8J0A", icon: "fa-solid fa-scroll", data_image_id: "image20"},
     { libelle: "Système de magasin", lien: "https://mega.nz/folder/ZKkBzDrI#zns0udTYWWghBMI6-OzK6A", icon: "fa-solid fa-scroll", data_image_id: "image19"},
+    { libelle: "Véhiucle de secours routier", lien: "https://mega.nz/folder/latTFI4L#g0yzQEaTo9v_pRXA9yLeUg", icon: "fa-solid fa-car", data_image_id: "image23"},
+    { libelle: "Plaque d'immatriculation", lien: "https://mega.nz/folder/wKlkQZya#VE7ZyKvegxZc7qeHiiV5TA", icon: "fa-solid fa-scroll", data_image_id: "image24"},
 ];
 
 export default donnees;

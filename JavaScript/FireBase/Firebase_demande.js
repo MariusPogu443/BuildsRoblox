@@ -69,9 +69,11 @@ const firebaseConfig = {
             allValid = false;
             errorintput.style.display = 'flex';
         } else {
+
+          const discordRegex = /^[\w\s]+#\d{4}$/;
             // Pas d'erreur, réinitialiser l'état
             errorintput.style.display = 'none';
-            if (valueI.includes('#')){
+            if (discordRegex.test(valueI)){
                 errorintputpseudo.style.display = "none"
             }else{
                 allValid = false;
