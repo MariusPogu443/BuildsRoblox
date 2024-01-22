@@ -34,6 +34,8 @@ const firebaseConfig = {
   const btnvalideform = document.querySelector('.Btn-Envoyer');
   const radioGroups = ['selectcreation', 'selectcreationqui', 'selectsite'];
   const fileInput = document.getElementById('fileInput');
+  var allValid = true;
+
 
   btnvalideform.addEventListener('click', async function (event) {
     event.preventDefault();
@@ -61,24 +63,14 @@ const firebaseConfig = {
         var valueI = element.value;
         const intputId = element.getAttribute('data-intput-id');
         const errorintput = document.querySelector(`.span_erreur[data-intput-id="${intputId}"]`);
-        const errorintputpseudo = document.getElementById('pseudoerror');
 
 
         if (valueI.length === 0 ) {
             // Il y a une erreur
             allValid = false;
             errorintput.style.display = 'flex';
-        } else {
-
-          const discordRegex = /^[\w\s]+#\d{4}$/;
-            // Pas d'erreur, réinitialiser l'état
-            errorintput.style.display = 'none';
-            if (discordRegex.test(valueI)){
-                errorintputpseudo.style.display = "none"
-            }else{
-                allValid = false;
-                errorintputpseudo.style.display = 'flex';
-            }
+        }else{
+          errorintput.style.display = 'none';
         }
     });
 
