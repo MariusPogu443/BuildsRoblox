@@ -1,57 +1,57 @@
 <!DOCTYPE html>
 
 <html lang="fr-fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Builds | Buildstore</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="shortcut icon" href="ressource/logo.png" type="images/png" />
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
-        <link rel="stylesheet" href="/CSS/Main.css">
-        <script src="https://kit.fontawesome.com/e0ee6af32a.js" crossorigin="anonymous"></script>
-    </head>
 
-    <body> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Builds | Buildstore</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="ressource/logo.png" type="images/png" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="/CSS/Main.css">
+    <script src="https://kit.fontawesome.com/e0ee6af32a.js" crossorigin="anonymous"></script>
+</head>
 
-        <nav>
-            <div class="nav">
-                <a href="index.html" class="nav-icon" aria-label="visit homepage" aria-current="page">
-                    <img id="LOGOS" src="ressource/logo.png" alt="buildstore icon">
-                    <span>BuildStore</span>
-                </a>
-        
-                <div class="main-navlinks">
-                    <button class="hamburger" type="button" aria-label="Toggle nav" aria-expanded="false">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
+<body>
+
+    <nav>
+        <div class="nav">
+            <a href="index.html" class="nav-icon" aria-label="visit homepage" aria-current="page">
+                <img id="LOGOS" src="ressource/logo.png" alt="buildstore icon">
+                <span>BuildStore</span>
+            </a>
+
+            <div class="main-navlinks">
+                <button class="hamburger" type="button" aria-label="Toggle nav" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <div class="navlinks-container">
+                <a href="index.html" aria-current="page">Touts</a>
+                <a href="Gui.html">Gui</a>
+                <a href="Scripts.html">Scripts</a>
+                <a href="Builds.html">Builds</a>
+                <a href="Vehicules.html">Véhicules</a>
+            </div>
+
+            <div class="contnairSearch">
+                <div class="search-textbox">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input id="recherche" type="text" class="search"
+                        onblur="if(this.value=='')this.value='Saisissez votre recherche';"
+                        onfocus="if(this.value=='Saisissez votre recherche')this.value='';" autocomplete="off"
+                        value="Saisissez votre recherche" placeholder="Saisissez votre recherche">
                 </div>
-        
-                <div class="navlinks-container">
-                    <a href="index.html" aria-current="page">Touts</a>
-                    <a href="Gui.html">Gui</a>
-                    <a href="Scripts.html">Scripts</a>
-                    <a href="Builds.html">Builds</a>
-                    <a href="Vehicules.html">Véhicules</a>
+                <div id="contnaire-resulta" class="contnaire-resulta">
+                    <div id="resultats"></div>
                 </div>
-        
-                <div class="contnairSearch">
-                    <div class="search-textbox">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <input id="recherche" type="text" class="search"
-                            onblur="if(this.value=='')this.value='Saisissez votre recherche';"
-                            onfocus="if(this.value=='Saisissez votre recherche')this.value='';"
-                            autocomplete="off"
-                            value="Saisissez votre recherche" placeholder="Saisissez votre recherche">
-                    </div>
-                    <div id="contnaire-resulta" class="contnaire-resulta">
-                        <div id="resultats"></div>
-                    </div>
-                </div>
-        
-                <!-- <div class="nav-authendication">
+            </div>
+
+            <!-- <div class="nav-authendication">
                         <a href="#" class="user-toggler" title="Se connecter">
                             <i class="fa-solid fa-circle-user"></i>
                         </a>
@@ -60,44 +60,45 @@
                             SE CONNECTER
                         </a>
                 </div> -->
-        
-                <div class="search-icon">
-                    <button id="CloseTextBox"><i class="fa-sharp fa-solid fa-xmark"></i></button>
-                    <button id="OpenTextBox"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
-            </div>
-    
-        </nav>
 
-        <section id="Outils" class="Win-roblox">
-            <div class="container">
-                <div class="Outil">
-                    <div class="Winrar">
-                        <a href="https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-591fr.exe">
-                            <img src="ressource/winrar.png" class="imgdiv"></a>
-                    </div>
-        
-                    <div class="Roblox">
-                        <a href="https://www.roblox.com/home"><img src="ressource/ROBLOX.png" class="imgdiv"></a>
-                    </div>
-                </div>
+            <div class="search-icon">
+                <button id="CloseTextBox"><i class="fa-sharp fa-solid fa-xmark"></i></button>
+                <button id="OpenTextBox"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
-        </section>
+        </div>
 
-        <section  class="TitrePage">
-            <div class="container">
-                <div class="Titre">
-                    <h1>Toutes les constructions</h1>
+    </nav>
+
+    <section id="Outils" class="Win-roblox">
+        <div class="container">
+            <div class="Outil">
+                <div class="Winrar">
+                    <a href="https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-591fr.exe">
+                        <img src="ressource/winrar.png" class="imgdiv"></a>
+                </div>
+
+                <div class="Roblox">
+                    <a href="https://www.roblox.com/home"><img src="ressource/ROBLOX.png" class="imgdiv"></a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+
+    <section class="TitrePage">
+        <div class="container">
+            <div class="Titre">
+                <h1>Toutes les constructions</h1>
+            </div>
+        </div>
+    </section>
 
     <ul class="grid-contnair">
         <li class="profile-card">
-            <img src ="ressource/BurgerKing.png" alt="profil" class="profile-img">
+            <img src="ressource/BurgerKing.png" alt="profil" class="profile-img">
             <ul class="model-info">
                 <p>V1</p>
-                <span class="view-counter" data-image-id="image18"><img  src="ressource/icons8-downloading-updates-windows-11-outline-70.png">0</span>
+                <span class="view-counter" data-image-id="image18"><img
+                        src="ressource/icons8-downloading-updates-windows-11-outline-70.png">0</span>
             </ul>
             <div class="profile-info">
                 <div class="profil">
@@ -105,120 +106,146 @@
                     <p class="profile-work">BuildStore</p>
                     <p class="profile-Maj">Ajouter le 10 avril 2023</p>
                 </div>
-                <a class="ButtonT" data-image-id="image18" href="https://mega.nz/folder/FCcjAYoT#Hs-H-wiofLLchpmwtPYGgw" target="_blank">
+                <a class="ButtonT" data-image-id="image18" href="https://mega.nz/folder/FCcjAYoT#Hs-H-wiofLLchpmwtPYGgw"
+                    target="_blank">
                     <img class="download" src="ressource/icons8-downloading-updates-windows-11-outline-70.png">
                 </a>
             </div>
-           </li>
-       <li class="profile-card">
-        <img src ="ressource/csp.png" alt="profil" class="profile-img">
-        <ul class="model-info">
-            <p>V1</p>
-            <span class="view-counter" data-image-id="image17"><img  src="ressource/icons8-downloading-updates-windows-11-outline-70.png">0</span>
-        </ul>
-        <div class="profile-info">
-            <div class="profil">
-                <p class="profile-name">CSP</p>
-                <p class="profile-work">BuildStore</p>
-                <p class="profile-Maj">Ajouter le 10 avril 2023</p>
+        </li>
+        <li class="profile-card">
+            <img src="ressource/csp.png" alt="profil" class="profile-img">
+            <ul class="model-info">
+                <p>V1</p>
+                <span class="view-counter" data-image-id="image17"><img
+                        src="ressource/icons8-downloading-updates-windows-11-outline-70.png">0</span>
+            </ul>
+            <div class="profile-info">
+                <div class="profil">
+                    <p class="profile-name">CSP</p>
+                    <p class="profile-work">BuildStore</p>
+                    <p class="profile-Maj">Ajouter le 10 avril 2023</p>
+                </div>
+                <a class="ButtonT" data-image-id="image17" href="https://mega.nz/folder/tKli0Z4A#42ncXz_MTTXb94SaiMFgZg"
+                    target="_blank">
+                    <img class="download" src="ressource/icons8-downloading-updates-windows-11-outline-70.png">
+                </a>
             </div>
-            <a class="ButtonT" data-image-id="image17" href="https://mega.nz/folder/tKli0Z4A#42ncXz_MTTXb94SaiMFgZg" target="_blank">
-                <img class="download" src="ressource/icons8-downloading-updates-windows-11-outline-70.png">
-            </a>
-        </div>
-    </li>
-    <li class="profile-card">
-     <img src ="ressource/Panneaux2.png" alt="profil" class="profile-img">
-     <ul class="model-info">
-         <p>V1</p>
-         <a class="Info" href="https://discord.gg/qFseAntnxD" target="_blank">
-            <i title="Aide" id="Info" class="fa-solid fa-info"></i>
-        </a>
-        <span class="view-counter" data-image-id="image9"><img  src="ressource/icons8-downloading-updates-windows-11-outline-70.png">0</span>
-     </ul>
-     <div class="profile-info">
-        <div class="profil">
-            <p class="profile-name">Panneaux signalisations</p>
-            <p class="profile-work">BuildStore</p>
-            <p class="profile-Maj">Ajouter le 8 mai 2023</p>
-        </div>
-        <a class="ButtonT" data-image-id="image9" href="https://mega.nz/folder/8TNACZQB#SiYewGNSquAu0Pl12UWnvA" target="_blank">
-            <img class="download" src="ressource/icons8-downloading-updates-windows-11-outline-70.png">
-        </a>
-    </div>
-     <li class="profile-card">
-        <img src ="ressource/PN2.png" alt="profil" class="profile-img">
-        <ul class="model-info">
-            <p>V1</p>
-            <span class="view-counter" data-image-id="image11"><img  src="ressource/icons8-downloading-updates-windows-11-outline-70.png">0</span>
-        </ul>
-        <div class="profile-info">
-            <div class="profil">
-                <p class="profile-name">Hotel de police</p>
-                <p class="profile-work">BuildStore</p>
-                <p class="profile-Maj">Ajouter le 8 mai 2023</p>
+        </li>
+        <li class="profile-card">
+            <img src="ressource/Panneaux2.png" alt="profil" class="profile-img">
+            <ul class="model-info">
+                <p>V1</p>
+                <a class="Info" href="https://discord.gg/qFseAntnxD" target="_blank">
+                    <i title="Aide" id="Info" class="fa-solid fa-info"></i>
+                </a>
+                <span class="view-counter" data-image-id="image9"><img
+                        src="ressource/icons8-downloading-updates-windows-11-outline-70.png">0</span>
+            </ul>
+            <div class="profile-info">
+                <div class="profil">
+                    <p class="profile-name">Panneaux signalisations</p>
+                    <p class="profile-work">BuildStore</p>
+                    <p class="profile-Maj">Ajouter le 20 janvier 2024</p>
+                </div>
+                <a class="ButtonT" data-image-id="image9" href="https://mega.nz/folder/8TNACZQB#SiYewGNSquAu0Pl12UWnvA"
+                    target="_blank">
+                    <img class="download" src="ressource/icons8-downloading-updates-windows-11-outline-70.png">
+                </a>
             </div>
-            <a class="ButtonT" data-image-id="image11" href="https://mega.nz/folder/0GMHnD5K#k_KB0wF_s2ITfMNQ91Q0rQ" target="_blank">
-                <img class="download" src="ressource/icons8-downloading-updates-windows-11-outline-70.png">
-            </a>
-        </div>
-       </li>
-       <li class="profile-card">
-        <img src ="ressource/CSI.png" alt="profil" class="profile-img">
-        <ul class="model-info">
-            <p>V1</p>
-            <span class="view-counter" data-image-id="image2"><img  src="ressource/icons8-downloading-updates-windows-11-outline-70.png">0</span>
-        </ul>
-        <div class="profile-info">
-            <div class="profil">
-                <p class="profile-name">CS</p>
-            <p class="profile-work">BuildStore</p>
-            <p class="profile-Maj">Ajouter le 04 septembre 2023</p>
+        <li class="profile-card">
+            <img src="ressource/PN2.png" alt="profil" class="profile-img">
+            <ul class="model-info">
+                <p>V1</p>
+                <span class="view-counter" data-image-id="image11"><img
+                        src="ressource/icons8-downloading-updates-windows-11-outline-70.png">0</span>
+            </ul>
+            <div class="profile-info">
+                <div class="profil">
+                    <p class="profile-name">Hotel de police</p>
+                    <p class="profile-work">BuildStore</p>
+                    <p class="profile-Maj">Ajouter le 8 mai 2023</p>
+                </div>
+                <a class="ButtonT" data-image-id="image11" href="https://mega.nz/folder/0GMHnD5K#k_KB0wF_s2ITfMNQ91Q0rQ"
+                    target="_blank">
+                    <img class="download" src="ressource/icons8-downloading-updates-windows-11-outline-70.png">
+                </a>
             </div>
-            <a class="ButtonT" data-image-id="image2" href="https://mega.nz/folder/tKViBYrB#t8IspY8-yt2DBZOw6jLrIg" target="_blank">
-                <img class="download" src="ressource/icons8-downloading-updates-windows-11-outline-70.png">
-            </a>
-        </div>
-       </li>
-       <li class="profile-card">
-        <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
-       </li>
-       <li class="profile-card">
-        <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
-       </li>
-       <li class="profile-card">
-        <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
-       </li>
-       <li class="profile-card">
-        <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
-       </li>
-       <li class="profile-card">
-        <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
-       </li>
-       <li class="profile-card">
-        <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
-       </li>
-       <li class="profile-card">
-        <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
-       </li>
-       <li class="profile-card">
-        <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
-       </li>
-       <li class="profile-card">
-        <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
-       </li>
-       <li class="profile-card">
-        <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
-       </li>
-       <li class="profile-card">
-        <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
-       </li>
-       <li class="profile-card">
-        <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
-       </li>
-       <li class="profile-card">
-        <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
-       </li>
+        </li>
+        <li class="profile-card">
+            <img src="ressource/CSI.png" alt="profil" class="profile-img">
+            <ul class="model-info">
+                <p>V1</p>
+                <span class="view-counter" data-image-id="image2"><img
+                        src="ressource/icons8-downloading-updates-windows-11-outline-70.png">0</span>
+            </ul>
+            <div class="profile-info">
+                <div class="profil">
+                    <p class="profile-name">CS</p>
+                    <p class="profile-work">BuildStore</p>
+                    <p class="profile-Maj">Ajouter le 04 septembre 2023</p>
+                </div>
+                <a class="ButtonT" data-image-id="image2" href="https://mega.nz/folder/tKViBYrB#t8IspY8-yt2DBZOw6jLrIg"
+                    target="_blank">
+                    <img class="download" src="ressource/icons8-downloading-updates-windows-11-outline-70.png">
+                </a>
+            </div>
+        </li>
+        <li class="profile-card">
+            <img src="ressource/maison.png" alt="profil" class="profile-img">
+            <ul class="model-info" data-image-id="image27">
+                <p>V1</p>
+                <span class="view-counter" data-image-id="image27">
+                    <img src="ressource/icons8-downloading-updates-windows-11-outline-70.png">0</span>
+                <p id="New">NOUVEAUX</p>
+            </ul>
+            <div class="profile-info">
+                <div class="profil">
+                    <p class="profile-name">Maison 1</p>
+                    <p class="profile-work">BuildStore</p>
+                    <p class="profile-Maj">Ajouter le 04 février 2024</p>
+                </div>
+                <a class="ButtonT" data-image-id="image27" href="https://mega.nz/folder/Nf8UGQyT#w96I3HGhrMjwEdkYe-wBGQ"
+                    target="_blank">
+                    <img class="download" src="ressource/icons8-downloading-updates-windows-11-outline-70.png">
+                </a>
+            </div>
+        </li>
+        <li class="profile-card">
+            <img src="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+        </li>
+        <li class="profile-card">
+            <img src="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+        </li>
+        <li class="profile-card">
+            <img src="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+        </li>
+        <li class="profile-card">
+            <img src="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+        </li>
+        <li class="profile-card">
+            <img src="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+        </li>
+        <li class="profile-card">
+            <img src="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+        </li>
+        <li class="profile-card">
+            <img src="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+        </li>
+        <li class="profile-card">
+            <img src="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+        </li>
+        <li class="profile-card">
+            <img src="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+        </li>
+        <li class="profile-card">
+            <img src="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+        </li>
+        <li class="profile-card">
+            <img src="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+        </li>
+        <li class="profile-card">
+            <img src="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+        </li>
     </ul>
 
     <div class="button-up">
@@ -262,8 +289,9 @@
         </div>
     </footer>
 
-    <script  src="JavaScript/script.js"></script>
+    <script src="JavaScript/script.js"></script>
     <script type="module" src="JavaScript/FireBase/FireBase.js"></script>
 
-    </body>
+</body>
+
 </html>

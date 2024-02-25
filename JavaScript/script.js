@@ -72,6 +72,13 @@ window.addEventListener('load', loadNotificationStates);
 // Nav Bar annimation scroll
 
 const SectionOption = document.querySelector(".MenuOption");
+const btnopition = document.querySelector(".ButtonOption");
+
+if (btnopition){
+  btnopition.addEventListener('click', () => {
+    SectionOption.style.display = "none"
+  })
+}
 
 document.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');
@@ -172,6 +179,25 @@ const toggleNav = e => {
 };
 hamburgertoggler.addEventListener("click",
 toggleNav);
+
+// ImageDefilAuto
+
+const models = document.querySelectorAll('.model-container');
+
+if (models){
+  function changeImages() {
+    models.forEach(model => {
+      const images = model.querySelectorAll('img');
+      let currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+      images[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].classList.add('active');
+    });
+  }
+
+  // Changer d'image dans tous les modèles toutes les 5 secondes
+  setInterval(changeImages, 5000);
+}
 
 // Pagination
 
