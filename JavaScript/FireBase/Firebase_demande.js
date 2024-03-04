@@ -31,27 +31,27 @@ async function uploadImageAndGetURL(file) {
   }
 }
 
-const btnvalideform = document.querySelector('.Btn-Envoyer');
+const Btndiv = document.getElementById('Btn_Prev')
+const BtndiConf = document.getElementById('Btn_Conf')
 const radioGroups = ['selectcreation', 'selectcreationqui', 'selectsite'];
 const fileInput = document.getElementById('fileInput');
-var allValid = true;
+const FormulaireFermer = document.querySelector('.Form-Fermer');
+const Formulaire = document.querySelector('.Form-Demande');
 
+const DivPrev = document.querySelector('.pop_up_envoyer')
+const CloseBtn = DivPrev.querySelector('.close')
 
-btnvalideform.addEventListener('click', async function (event) {
+const inputs = Formulaire.querySelectorAll('input[data-intput-id]');
+const textarea = document.querySelector('.textarea-textbox');
+const error = document.getElementById('error_description');
+
+let selectedRadioValues = {};
+
+Btndiv.addEventListener('click', async function (event) {
   event.preventDefault();
 
+  selectedRadioValues = {};
   var allValid = true;
-  let selectedRadioValues = {};
-
-  const pseudo = document.getElementById('pseduo').value;
-  const description = document.getElementById('Description').value;
-  const Formulaire = document.querySelector('.Form-Demande');
-  const FormulaireValide = document.querySelector('.Form-Envoyer');
-  const FormulaireFermer = document.querySelector('.Form-Fermer');
-
-  const inputs = Formulaire.querySelectorAll('input[data-intput-id]');
-  const textarea = document.querySelector('.textarea-textbox');
-  const error = document.getElementById('error_description');
 
   if (textarea.value.length === 0 || textarea.value.length < 20) {
     allValid = false;
@@ -95,12 +95,84 @@ btnvalideform.addEventListener('click', async function (event) {
     }
   });
 
+  if (allValid) {
+
+    DivPrev.style.display = "block";
+  }
+});
+
+BtndiConf.addEventListener("click", async function (event) {
+  event.preventDefault();
+
+  const pseudo = document.getElementById('pseduo').value;
+  const description = document.getElementById('Description').value;
+  const FormulaireValide = document.querySelector('.Form-Envoyer');
+
   try {
-    // Vérifie si la collection 'demandes' existe
+    const timestamp = new Date();
+    const imageFiles = fileInput.files; // Récupère les fichiers sélectionnés dans l'input de type file
+
+
+    if (imageFiles.length > 0) {
+      const imageUrls = []; // Stocke les URLs des images téléchargées
+
+      // Télécharge chaque image et récupère les URLs
+      for (let i = 0; i < imageFiles.length; i++) {
+        const imageUrl = await uploadImageAndGetURL(imageFiles[i]);
+        if (imageUrl) {
+          imageUrls.push(imageUrl);
+        }
+      }
+
+      // Envoie les données dans Firestore avec les URLs des images
+      const imageDocRef = collection(db, 'demandes');
+      await addDoc(imageDocRef, {
+        pseudo: pseudo,
+        description: description,
+        selectedRadioValues,
+        timestamp: timestamp,
+        imageUrls: imageUrls,
+      });
+    } else {
+      // Aucune image sélectionnée, envoie les autres données sans les URLs des images
+      const imageDocRef = collection(db, 'demandes');
+      await addDoc(imageDocRef, {
+        pseudo: pseudo,
+        description: description,
+        selectedRadioValues,
+        timestamp: timestamp,
+      });
+    }
+
+
+    DivPrev.style.display = "none";
+    FormulaireValide.style.display = "block";
+    Formulaire.style.display = "none";
+  } catch (error) {
+    console.error('Erreur lors de l\'envoi de la demande :', error);
+  }
+
+})
+
+
+CloseBtn.onclick = function () {
+  DivPrev.style.display = "none";
+}
+
+window.onclick = function (event) {
+  if (event.target == DivPrev) {
+    DivPrev.style.display = "none";
+  }
+}
+
+
+
+async function checkCollectionLimit() {
+  try {
+
     const demandesRef = collection(db, 'demandes');
     const demandesSnapshot = await getDocs(demandesRef);
 
-    // Vérifie le nombre de documents dans la collection
     if (demandesSnapshot.size >= 5) {
       Formulaire.style.display = "none"
       FormulaireFermer.style.display = "block"
@@ -111,48 +183,8 @@ btnvalideform.addEventListener('click', async function (event) {
   } catch (error) {
     console.error('Erreur lors de la vérification des collections :', error);
   }
+}
 
-  if (allValid) {
-    try {
-      const timestamp = new Date();
-      const imageFiles = fileInput.files; // Récupère les fichiers sélectionnés dans l'input de type file
-
-
-      if (imageFiles.length > 0) {
-        const imageUrls = []; // Stocke les URLs des images téléchargées
-
-        // Télécharge chaque image et récupère les URLs
-        for (let i = 0; i < imageFiles.length; i++) {
-          const imageUrl = await uploadImageAndGetURL(imageFiles[i]);
-          if (imageUrl) {
-            imageUrls.push(imageUrl);
-          }
-        }
-
-        // Envoie les données dans Firestore avec les URLs des images
-        const imageDocRef = collection(db, 'demandes');
-        await addDoc(imageDocRef, {
-          pseudo: pseudo,
-          description: description,
-          selectedRadioValues,
-          timestamp: timestamp,
-          imageUrls: imageUrls,
-        });
-      } else {
-        // Aucune image sélectionnée, envoie les autres données sans les URLs des images
-        const imageDocRef = collection(db, 'demandes');
-        await addDoc(imageDocRef, {
-          pseudo: pseudo,
-          description: description,
-          selectedRadioValues,
-          timestamp: timestamp,
-        });
-      }
-
-      FormulaireValide.style.display = "block";
-      Formulaire.style.display = "none";
-    } catch (error) {
-      console.error('Erreur lors de l\'envoi de la demande :', error);
-    }
-  }
+window.addEventListener('load', () => {
+  checkCollectionLimit();
 });
