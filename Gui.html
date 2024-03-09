@@ -1,56 +1,56 @@
 <!DOCTYPE html>
 
 <html lang="fr-fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Gui | Buildstore</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="shortcut icon" href="ressource/logo.png" type="images/png" />
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
-        <link rel="stylesheet" href="/CSS/Main.css">
-        <script src="https://kit.fontawesome.com/e0ee6af32a.js" crossorigin="anonymous"></script>
-    </head>
 
-    <body> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gui | Buildstore</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="ressource/logo.png" type="images/png" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="/CSS/Main.css">
+    <script src="https://kit.fontawesome.com/e0ee6af32a.js" crossorigin="anonymous"></script>
+</head>
 
-        <nav>
-            <div class="nav">
-                <a href="index.html" class="nav-icon" aria-label="visit homepage" aria-current="page">
-                    <img id="LOGOS" src="ressource/logobig.png" alt="buildstore icon">
-                </a>
-        
-                <div class="main-navlinks">
-                    <button class="hamburger" type="button" aria-label="Toggle nav" aria-expanded="false">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
+<body>
+
+    <nav>
+        <div class="nav">
+            <a href="index.html" class="nav-icon" aria-label="visit homepage" aria-current="page">
+                <img id="LOGOS" src="ressource/logobig.png" alt="buildstore icon">
+            </a>
+
+            <div class="main-navlinks">
+                <button class="hamburger" type="button" aria-label="Toggle nav" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <div class="navlinks-container">
+                <a href="index.html" aria-current="page">Touts</a>
+                <a href="Gui.html">Gui</a>
+                <a href="Scripts.html">Scripts</a>
+                <a href="Builds.html">Builds</a>
+                <a href="Vehicules.html">Véhicules</a>
+            </div>
+
+            <div class="contnairSearch">
+                <div class="search-textbox">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input id="recherche" type="text" class="search" autocomplete="off"
+                        onblur="if(this.value=='')this.value='Saisissez votre recherche';"
+                        onfocus="if(this.value=='Saisissez votre recherche')this.value='';"
+                        value="Saisissez votre recherche" placeholder="Saisissez votre recherche">
                 </div>
-        
-                <div class="navlinks-container">
-                    <a href="index.html" aria-current="page">Touts</a>
-                    <a href="Gui.html">Gui</a>
-                    <a href="Scripts.html">Scripts</a>
-                    <a href="Builds.html">Builds</a>
-                    <a href="Vehicules.html">Véhicules</a>
+                <div id="contnaire-resulta" class="contnaire-resulta">
+                    <div id="resultats"></div>
                 </div>
-        
-                <div class="contnairSearch">
-                    <div class="search-textbox">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <input id="recherche" type="text" class="search"
-                        autocomplete="off"
-                            onblur="if(this.value=='')this.value='Saisissez votre recherche';"
-                            onfocus="if(this.value=='Saisissez votre recherche')this.value='';"
-                            value="Saisissez votre recherche" placeholder="Saisissez votre recherche">
-                    </div>
-                    <div id="contnaire-resulta" class="contnaire-resulta">
-                        <div id="resultats"></div>
-                    </div>
-                </div>
-        
-                <!-- <div class="nav-authendication">
+            </div>
+
+            <!-- <div class="nav-authendication">
                         <a href="#" class="user-toggler" title="Se connecter">
                             <i class="fa-solid fa-circle-user"></i>
                         </a>
@@ -59,48 +59,49 @@
                             SE CONNECTER
                         </a>
                 </div> -->
-        
-                <div class="search-icon">
-                    <button id="CloseTextBox"><i class="fa-sharp fa-solid fa-xmark"></i></button>
-                    <button id="OpenTextBox"><i class="fa-solid fa-magnifying-glass"></i></button>
+
+            <div class="search-icon">
+                <button id="CloseTextBox"><i class="fa-sharp fa-solid fa-xmark"></i></button>
+                <button id="OpenTextBox"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <div class="loader-container">
+                <div class="loader-bar" id="loader"></div>
+            </div>
+        </div>
+
+    </nav>
+
+    <section id="Outils" class="Win-roblox">
+        <div class="container">
+            <div class="Outil">
+                <div class="Winrar">
+                    <a href="https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-591fr.exe">
+                        <img src="ressource/winrar.png" class="imgdiv"></a>
                 </div>
 
-                <div class="loader-container">
-                    <div class="loader-bar" id="loader"></div>
+                <div class="Roblox">
+                    <a href="https://www.roblox.com/home"><img src="ressource/ROBLOX.png" class="imgdiv"></a>
                 </div>
             </div>
-    
-        </nav>
+        </div>
+    </section>
 
-        <section id="Outils" class="Win-roblox">
-            <div class="container">
-                <div class="Outil">
-                    <div class="Winrar">
-                        <a href="https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-591fr.exe">
-                            <img src="ressource/winrar.png" class="imgdiv"></a>
-                    </div>
-        
-                    <div class="Roblox">
-                        <a href="https://www.roblox.com/home"><img src="ressource/ROBLOX.png" class="imgdiv"></a>
-                    </div>
-                </div>
+    <section class="TitrePage">
+        <div class="container">
+            <div class="Titre">
+                <h1>Tous les Interface Graphique</h1>
             </div>
-        </section>
-
-        <section  class="TitrePage">
-            <div class="container">
-                <div class="Titre">
-                    <h1>Tous les Interface Graphique</h1>
-                </div>
-            </div>
-        </section>
+        </div>
+    </section>
 
     <ul class="grid-contnair">
-           <li class="profile-card">
-            <img src ="ressource/interface.png" alt="profil" class="profile-img">
+        <li class="profile-card">
+            <img src="ressource/interface.png" alt="profil" class="profile-img">
             <ul class="model-info">
                 <p>V1.1</p>
-                <span class="view-counter" data-image-id="image16"><img  src="ressource/icons8-downloading-updates-windows-11-outline-70.png">0</span>
+                <span class="view-counter" data-image-id="image16"><img
+                        src="ressource/icons8-downloading-updates-windows-11-outline-70.png">0</span>
             </ul>
             <div class="profile-info">
                 <div class="profil">
@@ -108,12 +109,13 @@
                     <p class="profile-work">BuildStore</p>
                     <p class="profile-Maj">Mise jour le 10 avril 2023</p>
                 </div>
-                <a class="ButtonT" data-image-id="image16" href="https://mega.nz/folder/xSNAxI5I#m6IEEkzkUvxmLnaIdFmlJg" target="_blank">
+                <a class="ButtonT" data-image-id="image16" href="https://mega.nz/folder/xSNAxI5I#m6IEEkzkUvxmLnaIdFmlJg"
+                    target="_blank">
                     <img class="download" src="ressource/icons8-downloading-updates-windows-11-outline-70.png">
                 </a>
             </div>
-           </li>
-           <li class="profile-card">
+        </li>
+        <li class="profile-card">
             <img src="ressource/mercuraV3.png" alt="profil" class="profile-img">
             <ul class="model-info">
                 <p>V3</p>
@@ -122,7 +124,6 @@
                 </a>
                 <span class="view-counter" data-image-id="image13"><img
                         src="ressource/icons8-downloading-updates-windows-11-outline-70.png">0</span>
-                <p id="New">MISE À JOUR</p>
             </ul>
             <div class="profile-info">
                 <div class="profil">
@@ -130,21 +131,22 @@
                     <p class="profile-work">BuildStore</p>
                     <p class="profile-Maj">Mise a jour le 29 févirer 2024</p>
                 </div>
-                <a class="ButtonT" data-image-id="image13"
-                    href="https://mega.nz/folder/IOcEHRKA#FzXB1YQ-e7laM5PP3WhivQ" target="_blank">
+                <a class="ButtonT" data-image-id="image13" href="https://mega.nz/folder/IOcEHRKA#FzXB1YQ-e7laM5PP3WhivQ"
+                    target="_blank">
                     <img class="download" src="ressource/icons8-downloading-updates-windows-11-outline-70.png">
                 </a>
             </div>
         </li>
-           <li class="profile-card">
-            <img src ="ressource/IphoneV2.png" alt="profil" class="profile-img">
+        <li class="profile-card">
+            <img src="ressource/IphoneV2.png" alt="profil" class="profile-img">
             <ul class="model-info">
                 <p>V1.1</p>
                 <a class="Info" href="https://discord.gg/qFseAntnxD" target="_blank">
                     <i title="Aide" id="Info" class="fa-solid fa-info"></i>
                 </a>
                 <i title="Légendaire" class="fa-sharp fa-solid fa-star"></i>
-                <span class="view-counter" data-image-id="image4"><img  src="ressource/icons8-downloading-updates-windows-11-outline-70.png">0</span>
+                <span class="view-counter" data-image-id="image4"><img
+                        src="ressource/icons8-downloading-updates-windows-11-outline-70.png">0</span>
             </ul>
             <div class="profile-info">
                 <div class="profil">
@@ -152,12 +154,13 @@
                     <p class="profile-work">BuildStore</p>
                     <p class="profile-Maj">Ajouter le 20 janvier 2024</p>
                 </div>
-                <a class="ButtonT" data-image-id="image4" href="https://mega.nz/folder/Ja9RGayb#gKja84HMnNpZSmYAM3YVRg" target="_blank">
+                <a class="ButtonT" data-image-id="image4" href="https://mega.nz/folder/Ja9RGayb#gKja84HMnNpZSmYAM3YVRg"
+                    target="_blank">
                     <img class="download" src="ressource/icons8-downloading-updates-windows-11-outline-70.png">
                 </a>
             </div>
-           </li>
-           <li class="profile-card">
+        </li>
+        <li class="profile-card">
             <img src="ressource/Radio.png" alt="profil" class="profile-img">
             <ul class="model-info">
                 <p>V2</p>
@@ -171,54 +174,71 @@
                     <p class="profile-work">BuildStore</p>
                     <p class="profile-Maj">Mise à jour le 09 fevrier 2024</p>
                 </div>
-                <a class="ButtonT" data-image-id="image3"
-                    href="https://mega.nz/folder/dGNigAYI#F9iOir8SmMrUQa4sV_UUjw" target="_blank">
+                <a class="ButtonT" data-image-id="image3" href="https://mega.nz/folder/dGNigAYI#F9iOir8SmMrUQa4sV_UUjw"
+                    target="_blank">
                     <img class="download" src="ressource/icons8-downloading-updates-windows-11-outline-70.png">
                 </a>
             </div>
         </li>
-           <li class="profile-card">
-            <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
-           </li>
-           <li class="profile-card">
-            <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
-           </li>
-           <li class="profile-card">
-            <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
-           </li>
-           <li class="profile-card">
-            <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
-           </li>
-           <li class="profile-card">
-            <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
-           </li>
-           <li class="profile-card">
-            <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
-           </li>
-           <li class="profile-card">
-            <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
-           </li>
-           <li class="profile-card">
-            <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
-           </li>
-           <li class="profile-card">
-            <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
-           </li>
-           <li class="profile-card">
-            <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
-           </li>
-           <li class="profile-card">
-            <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
-           </li>
-           <li class="profile-card">
-            <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
-           </li>
-           <li class="profile-card">
-            <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
-           </li>
-           <li class="profile-card">
-            <img src ="ressource/avenir.jpg" alt="profil" class="profile-img-None">
-           </li>
+        <li class="profile-card">
+            <img src="ressource/Concessionaire2.png" alt="profil" class="profile-img">
+            <ul class="model-info" data-image-id="image29">
+                <p>V1</p>
+                <span class="view-counter" data-image-id="image29">
+                    <img src="ressource/icons8-downloading-updates-windows-11-outline-70.png">0</span>
+                <p id="New">NOUVEAUX</p>
+            </ul>
+            <div class="profile-info">
+                <div class="profil">
+                    <p class="profile-name">Systeme Concessionnaire</p>
+                    <p class="profile-work">BuildStore</p>
+                    <p class="profile-Maj">Ajouter le 08 mars 2024</p>
+                </div>
+                <a class="ButtonT" data-image-id="image29" href="https://mega.nz/folder/la0DhZhY#sfQtYaWJ1EMD9RGY12Numg"
+                    target="_blank">
+                    <img class="download" src="ressource/icons8-downloading-updates-windows-11-outline-70.png">
+                </a>
+            </div>
+        </li>
+        <li class="profile-card">
+            <img src="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+        </li>
+        <li class="profile-card">
+            <img src="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+        </li>
+        <li class="profile-card">
+            <img src="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+        </li>
+        <li class="profile-card">
+            <img src="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+        </li>
+        <li class="profile-card">
+            <img src="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+        </li>
+        <li class="profile-card">
+            <img src="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+        </li>
+        <li class="profile-card">
+            <img src="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+        </li>
+        <li class="profile-card">
+            <img src="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+        </li>
+        <li class="profile-card">
+            <img src="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+        </li>
+        <li class="profile-card">
+            <img src="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+        </li>
+        <li class="profile-card">
+            <img src="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+        </li>
+        <li class="profile-card">
+            <img src="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+        </li>
+        <li class="profile-card">
+            <img src="ressource/avenir.jpg" alt="profil" class="profile-img-None">
+        </li>
     </ul>
 
     <div class="button-up">
@@ -262,8 +282,9 @@
         </div>
     </footer>
 
-    <script  src="JavaScript/script.js"></script>
+    <script src="JavaScript/script.js"></script>
     <script type="module" src="JavaScript/FireBase/FireBase.js"></script>
 
-    </body>
+</body>
+
 </html>

@@ -23,24 +23,46 @@ textarea.addEventListener('keyup', e => {
 })
 
 const fileInput = document.getElementById('fileInput');
-const imagePreview = document.getElementById('imagePreview');
-const titreImage = document.querySelector('.titre-image');
+const resetButton = document.getElementById('resetButton');
+const mediaPreview = document.getElementById('imagePreview');
+const titreMedia = document.querySelector('.titre-image');
+
+let imageCount = 0;
+let videoCount = 0;
 
 fileInput.addEventListener('change', function () {
-    imagePreview.innerHTML = ''; // Réinitialise le contenu pour éviter d'afficher les anciennes images
-
     const files = fileInput.files;
-    titreImage.textContent = files.length > 0 ? `${files.length} images sélectionnés` : 'Aucun fichier sélectionné';
+
+    // Efface le contenu précédent de la prévisualisation
+    mediaPreview.innerHTML = '';
 
     for (let i = 0; i < files.length; i++) {
         const file = files[i];
 
-        // Crée un élément image pour chaque fichier sélectionné
-        const img = document.createElement('img');
-        img.src = URL.createObjectURL(file);
-        img.classList.add('preview-image');
-
-        // Ajoute l'image à la div d'aperçu
-        imagePreview.appendChild(img);
+        // Crée un élément pour chaque fichier sélectionné
+        if (file.type.startsWith('image/')) {
+            const img = document.createElement('img');
+            img.src = URL.createObjectURL(file);
+            img.classList.add('preview-media');
+            mediaPreview.appendChild(img);
+            imageCount++;
+        } else if (file.type.startsWith('video/')) {
+            videoCount++;
+        }
     }
+
+    titreMedia.textContent = imageCount > 0 ? `${imageCount} images sélectionnées` : 'Aucune image sélectionnée';
+    if (videoCount > 0) {
+        titreMedia.textContent += ` et ${videoCount} vidéo${videoCount > 1 ? 's' : ''} sélectionnée${videoCount > 1 ? 's' : ''}`;
+    }
+});
+
+resetButton.addEventListener('click', function () {
+    // Réinitialise le champ de sélection de fichiers et efface la prévisualisation
+    fileInput.value = '';
+    mediaPreview.innerHTML = '';
+    titreMedia.textContent = 'Aucun fichier sélectionné';
+    // Réinitialise les compteurs
+    imageCount = 0;
+    videoCount = 0;
 });

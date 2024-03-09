@@ -396,3 +396,20 @@ textarea:is(:focus) {
     font-size: 15px;
     margin-bottom: 15px;
 }
+
+/* ----BTN RESET----- */
+
+#resetButton {
+    display: block;
+    justify-self: center;
+    align-items: center;
+    background-color: #D00000;
+    border: none;
+    padding: 10px;
+    color: white;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}

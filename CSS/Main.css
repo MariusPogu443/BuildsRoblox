@@ -59,7 +59,6 @@ body {
     border-radius: 10px;
     z-index: 2;
     position: relative;
-    overflow: hidden;
 }
 
 nav {
@@ -91,32 +90,6 @@ nav.sticky {
     margin-left: 10px;
     font-weight: 400;
     color: rgb(255, 255, 255);
-}
-
-.nav_contnaire_raccourci a {
-    backdrop-filter: blur(50px);
-    -webkit-backdrop-filter: blur(50px);
-    background-color: rgba(75, 75, 72, 0.3);
-    padding: 5px 10px;
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    border-radius: 6px;
-    margin-left: 10px;
-    transition: all 0.2s ease-in;
-}
-
-.nav_contnaire_raccourci.Close {
-    opacity: 0;
-}
-
-.nav_contnaire_raccourci {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    width: 100%;
 }
 
 .hamburger {
@@ -1020,6 +993,13 @@ ul a img {
     align-items: center;
 }
 
+.Partenaria .container .container_Discord {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
 .Partenaria .container p {
     color: #4d4c4c;
     text-align: center;
@@ -1029,10 +1009,13 @@ ul a img {
 
 .Discord {
     justify-content: center;
-    width: 100%;
     display: flex;
     align-items: center;
     padding: 5px;
+}
+
+#UFRP {
+    width: 80px;
 
 }
 
@@ -1312,7 +1295,7 @@ footer {
 /* ----------------------------- SECTION INFORMATION POP UP ----------------------------- */
 
 .MenuOption {
-    display: none;
+    display: flex;
     align-items: center;
     position: relative;
     justify-content: center;

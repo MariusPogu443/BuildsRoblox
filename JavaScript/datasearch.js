@@ -10,14 +10,14 @@ var donnees = [
     { libelle: "Centre de secours et d'incendit", lien: "https://mega.nz/folder/tKli0Z4A#42ncXz_MTTXb94SaiMFgZg", icon: "fa-solid fa-building", data_image_id: "image17" },
     { libelle: "Centre de secours", lien: "https://mega.nz/folder/tKViBYrB#t8IspY8-yt2DBZOw6jLrIg", icon: "fa-solid fa-building", data_image_id: "image1" },
     { libelle: "Panneaux de signalisations", lien: "https://mega.nz/folder/8TNACZQB#SiYewGNSquAu0Pl12UWnvA", icon: "fa-solid fa-building", data_image_id: "image2" },
-    { libelle: "Iphone 14 Pro Max", lien: "https://mega.nz/folder/Ja9RGayb#gKja84HMnNpZSmYAM3YVRg", icon: "fa-solid fa-scroll", data_image_id: "image4" },
+    { libelle: "Iphone 14 Pro Max", lien: "https://mega.nz/folder/Ja9RGayb#gKja84HMnNpZSmYAM3YVRg", icon: "fa-solid fa-tablet-button", data_image_id: "image4" },
     { libelle: "Panel mercura", lien: "https://mega.nz/folder/IOcEHRKA#FzXB1YQ-e7laM5PP3WhivQ", icon: "fa-solid fa-scroll", data_image_id: "image13" },
-    { libelle: "Radio", lien: "https://mega.nz/folder/dGNigAYI#F9iOir8SmMrUQa4sV_UUjw", icon: "fa-solid fa-scroll", data_image_id: "image3" },
+    { libelle: "Radio", lien: "https://mega.nz/folder/dGNigAYI#F9iOir8SmMrUQa4sV_UUjw", icon: "fa-solid fa-tablet-button", data_image_id: "image3" },
     { libelle: "Barriere parking", lien: "https://mega.nz/folder/xSUVnagD#DbMLH07aCa0Ti_RH-DHXXg", icon: "fa-solid fa-scroll", data_image_id: "image8" },
     { libelle: "Tenus sapeurs-pompiers", lien: "https://mega.nz/folder/USkQTLqB#1cGi1Z7O58Xj1AYsSe1OKg", icon: "fa-solid fa-scroll", data_image_id: "image1" },
     { libelle: "Radar fixe routier", lien: "https://mega.nz/folder/5PkhzaIT#0BPLQ3xySlaSBj6NhvkYrg", icon: "fa-solid fa-scroll", data_image_id: "image7" },
     { libelle: "Portail", lien: "https://mega.nz/folder/FCM2FRqQ#lOgdaW290tHNtzn9OKNb5A", icon: "fa-solid fa-scroll", data_image_id: "image15" },
-    { libelle: "Interface", lien: "https://smega.nz/folder/xSNAxI5I#m6IEEkzkUvxmLnaIdFmlJg", icon: "fa-solid fa-scroll", data_image_id: "image16" },
+    { libelle: "Interface", lien: "https://smega.nz/folder/xSNAxI5I#m6IEEkzkUvxmLnaIdFmlJg", icon: "fa-solid fa-tablet-button", data_image_id: "image16" },
     { libelle: "Belier retractable", lien: "https://mega.nz/folder/pW1jGTxT#oVkNBa_Ui-4Is6wIIqJrvw", icon: "fa-solid fa-scroll", data_image_id: "image22" },
     { libelle: "Peugeot 5008 PN", lien: "https://mega.nz/folder/9DsEnYjL#osR4DfZZbgysUVI5zZuRUQ", icon: "fa-solid fa-car", data_image_id: "image21" },
     { libelle: "Système Parking", lien: "https://mega.nz/folder/pKk0XYrb#OKPam7khymbe3BWLvl8J0A", icon: "fa-solid fa-scroll", data_image_id: "image20" },
@@ -28,7 +28,8 @@ var donnees = [
     { libelle: "Système de gestion des sapeurs pompiers", lien: "https://mega.nz/folder/EHUg2IjC#HELfsLmnySOlqZmbGhaxRQ", icon: "fa-solid fa-scroll", data_image_id: "image26" },
     { libelle: "Maison #1 Réaliste", lien: "https://mega.nz/folder/Nf8UGQyT#w96I3HGhrMjwEdkYe-wBGQ", icon: "fa-solid fa-building", data_image_id: "image27" },
     { libelle: "Equipements Sapeurs-Pompiers", lien: "https://mega.nz/folder/weViBDRb#F_VZZdqo9XxSLURZ17kZPg", icon: "fa-solid fa-scroll", data_image_id: "image28" },
-    
+    { libelle: "Systeme concessionnaire automobile", lien: "https://mega.nz/folder/la0DhZhY#sfQtYaWJ1EMD9RGY12Numg", icon: "fa-solid fa-tablet-button", data_image_id: "image29" },
+    { libelle: "Packs d'equipement pour fastfood", lien: "https://mega.nz/folder/la0DhZhY#sfQtYaWJ1EMD9RGY12Numg", icon: "fa-solid fa-building", data_image_id: "image30" },
 ];
 
 export default donnees;

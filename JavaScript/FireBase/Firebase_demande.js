@@ -18,18 +18,19 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const storage = getStorage(app)
 
-async function uploadImageAndGetURL(file) {
-  const storageRef = ref(storage, 'images/' + file.name);
+async function uploadFileAndGetURL(file) {
+  const storageRef = ref(storage, 'files/' + file.name);
 
   try {
     const snapshot = await uploadBytes(storageRef, file);
     const downloadURL = await getDownloadURL(snapshot.ref);
     return downloadURL;
   } catch (error) {
-    console.error('Erreur lors du téléchargement de l\'image : ', error);
+    console.error('Erreur lors du téléchargement du fichier : ', error);
     return null;
   }
 }
+
 
 const Btndiv = document.getElementById('Btn_Prev')
 const BtndiConf = document.getElementById('Btn_Conf')
@@ -110,40 +111,32 @@ BtndiConf.addEventListener("click", async function (event) {
 
   try {
     const timestamp = new Date();
-    const imageFiles = fileInput.files; // Récupère les fichiers sélectionnés dans l'input de type file
+    const files = fileInput.files; // Récupère les fichiers sélectionnés dans l'input de type file
 
+    if (files.length > 0) {
+      const fileUrls = []; // Stocke les URLs des fichiers téléchargés
 
-    if (imageFiles.length > 0) {
-      const imageUrls = []; // Stocke les URLs des images téléchargées
-
-      // Télécharge chaque image et récupère les URLs
-      for (let i = 0; i < imageFiles.length; i++) {
-        const imageUrl = await uploadImageAndGetURL(imageFiles[i]);
-        if (imageUrl) {
-          imageUrls.push(imageUrl);
+      // Télécharge chaque fichier et récupère les URLs
+      for (let i = 0; i < files.length; i++) {
+        const fileUrl = await uploadFileAndGetURL(files[i]);
+        if (fileUrl) {
+          fileUrls.push(fileUrl);
         }
       }
 
-      // Envoie les données dans Firestore avec les URLs des images
-      const imageDocRef = collection(db, 'demandes');
-      await addDoc(imageDocRef, {
+      // Envoie les données dans Firestore avec les URLs des fichiers
+      const demandeDocRef = collection(db, 'demandes');
+      await addDoc(demandeDocRef, {
         pseudo: pseudo,
         description: description,
-        selectedRadioValues,
         timestamp: timestamp,
-        imageUrls: imageUrls,
+        selectedRadioValues,
+        fileUrls: fileUrls,
       });
     } else {
-      // Aucune image sélectionnée, envoie les autres données sans les URLs des images
-      const imageDocRef = collection(db, 'demandes');
-      await addDoc(imageDocRef, {
-        pseudo: pseudo,
-        description: description,
-        selectedRadioValues,
-        timestamp: timestamp,
-      });
+      // Aucun fichier sélectionné, afficher un message d'erreur ou gérer le cas en conséquence
+      console.error('Aucun fichier sélectionné.');
     }
-
 
     DivPrev.style.display = "none";
     FormulaireValide.style.display = "block";
@@ -151,8 +144,7 @@ BtndiConf.addEventListener("click", async function (event) {
   } catch (error) {
     console.error('Erreur lors de l\'envoi de la demande :', error);
   }
-
-})
+});
 
 
 CloseBtn.onclick = function () {

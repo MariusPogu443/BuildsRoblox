@@ -12,189 +12,182 @@ function removeCircle(notification) {
   loadNotificationStates();
 }
 
-const NotifBtn = document.querySelector(".icon-notif");
-const NotifPointIcon = document.getElementById("PointNotif");
-const Notifcontnaire = document.querySelector(".contnaire-notif");
+const notifications = document.querySelectorAll('.Notification li');
 
-// document.addEventListener("DOMContentLoaded", function() {
-//   const notifications = document.querySelectorAll('.Notification li');
-//   const pointNotif = document.getElementById('PointNotif');
+if (notifications) {
 
-//   // Fonction pour masquer les points de notification pour les notifications vues
-//   function hidePointsForViewedNotifications() {
-//       if (notifications) {
-//           notifications.forEach(notification => {
-//               const notificationText = notification.innerText.trim();
-//               const isViewed = localStorage.getItem(notificationText);
-//               const circle = notification.querySelector('.fa-circle');
+  document.addEventListener("DOMContentLoaded", function () {
 
-//               if (isViewed === 'vue' && circle) {
-//                   circle.style.display = 'none';
-//               }
-//           });
-//       }
+    const pointNotif = document.getElementById('PointNotif');
 
-//       // Cache la pastille de notification si aucune notification non vue n'est présente
-//       const hasUnviewedNotification = Array.from(notifications).some(notification => {
-//           const notificationText = notification.innerText.trim();
-//           return localStorage.getItem(notificationText) !== 'vue';
-//       });
+    // Fonction pour masquer les points de notification pour les notifications vues
+    function hidePointsForViewedNotifications() {
+      if (notifications) {
+        notifications.forEach(notification => {
+          const notificationText = notification.innerText.trim();
+          const isViewed = localStorage.getItem(notificationText);
+          const circle = notification.querySelector('.fa-circle');
 
-//       if (pointNotif) {
-//           pointNotif.style.visibility = hasUnviewedNotification ? "visible" : "hidden";
-//       }
-//   }
+          if (isViewed === 'vue' && circle) {
+            circle.style.display = 'none';
+          }
+        });
+      }
 
-//   // Masque les points de notification pour les notifications vues lors du chargement initial
-//   hidePointsForViewedNotifications();
+      // Cache la pastille de notification si aucune notification non vue n'est présente
+      const hasUnviewedNotification = Array.from(notifications).some(notification => {
+        const notificationText = notification.innerText.trim();
+        return localStorage.getItem(notificationText) !== 'vue';
+      });
 
-//   // Fonction pour marquer une notification comme vue et masquer son point de notification
-//   function markNotificationAsViewed(notification) {
-//       const notificationText = notification.innerText.trim();
-//       localStorage.setItem(notificationText, 'vue');
-//       const circle = notification.querySelector('.fa-circle');
+      if (pointNotif) {
+        pointNotif.style.visibility = hasUnviewedNotification ? "visible" : "hidden";
+      }
+    }
 
-//       if (circle) {
-//           circle.style.display = 'none';
-//       }
-
-//       // Cache la pastille de notification si aucune notification non vue n'est présente
-//       const hasUnviewedNotification = Array.from(notifications).some(notification => {
-//           const notificationText = notification.innerText.trim();
-//           return localStorage.getItem(notificationText) !== 'vue';
-//       });
-
-//       if (pointNotif) {
-//           pointNotif.style.visibility = hasUnviewedNotification ? "visible" : "hidden";
-//       }
-//   }
-
-//   // Ajoute un événement pour marquer une notification comme vue lorsqu'elle est survolée
-//   if (notifications) {
-//       notifications.forEach(notification => {
-//           notification.addEventListener('mouseover', function() {
-//               markNotificationAsViewed(notification);
-//           });
-//       });
-//   }
-// });
-
-
-// Fonction pour charger les états des notifications depuis le localStorage
-function loadNotificationStates() {
-  const notifications = document.querySelectorAll('.Notification li');
-  if (notifications) {
-    notifications.forEach(notification => {
+    // Fonction pour marquer une notification comme vue et masquer son point de notification
+    function markNotificationAsViewed(notification) {
       const notificationText = notification.innerText.trim();
-      const isViewed = localStorage.getItem(notificationText);
+      localStorage.setItem(notificationText, 'vue');
       const circle = notification.querySelector('.fa-circle');
 
-      if (isViewed === 'vue' && circle) {
+      if (circle) {
         circle.style.display = 'none';
+      }
+
+      // Cache la pastille de notification si aucune notification non vue n'est présente
+      const hasUnviewedNotification = Array.from(notifications).some(notification => {
+        const notificationText = notification.innerText.trim();
+        return localStorage.getItem(notificationText) !== 'vue';
+      });
+
+      if (pointNotif) {
+        pointNotif.style.visibility = hasUnviewedNotification ? "visible" : "hidden";
+      }
+    }
+
+    // Ajoute un événement pour marquer une notification comme vue lorsqu'elle est survolée
+    if (notifications) {
+      notifications.forEach(notification => {
+        notification.addEventListener('mouseover', function () {
+          markNotificationAsViewed(notification);
+        });
+      });
+    }
+
+    // Masque les points de notification pour les notifications vues lors du chargement initial
+    hidePointsForViewedNotifications();
+
+    // Fonction pour charger les états des notifications depuis le localStorage
+    function loadNotificationStates() {
+
+      let hasUnviewedNotification = false;
+
+      if (notifications) {
+        notifications.forEach(notification => {
+          const notificationText = notification.innerText.trim();
+          const isViewed = localStorage.getItem(notificationText);
+
+          if (isViewed !== 'vue') {
+            // Si la notification n'a pas été vue, affiche le cercle
+            const circle = notification.querySelector('.fa-circle');
+            if (circle) {
+              circle.style.display = 'block';
+            }
+            hasUnviewedNotification = true; // Met à jour à true si au moins une notification non vue est trouvée
+          } else {
+            // Si la notification a été vue, cache le cercle
+            const circle = notification.querySelector('.fa-circle');
+            if (circle) {
+              circle.style.display = 'none';
+            }
+          }
+        });
+
+        // Affiche ou cache la pastille en fonction des notifications non vues
+        if (pointNotif) {
+          if (hasUnviewedNotification) {
+            pointNotif.style.visibility = "visible"
+          } else {
+            pointNotif.style.visibility = "hidden"
+          }
+        }
+      }
+    }
+
+    // Charger les états des notifications lors du chargement de la page
+    if (notifications) {
+      loadNotificationStates();
+    }
+
+
+    // Fonction pour marquer une notification comme vue et la cacher
+    if (notifications) {
+      function markNotificationAsViewed(notification) {
+        const notificationText = notification.innerText.trim();
+        localStorage.setItem(notificationText, 'vue');
+        const circle = notification.querySelector('.fa-circle');
+
+        if (circle) {
+          circle.style.display = 'none';
+        }
+      }
+    }
+
+
+    // Ajouter un gestionnaire d'événements pour marquer une notification comme vue lorsque survolée
+    if (notifications) {
+      notifications.forEach(notification => {
+        notification.addEventListener('mouseover', function () {
+          markNotificationAsViewed(notification);
+        });
+      });
+    }
+  });
+
+  const NotifBtn = document.querySelector(".icon-notif");
+  const NotifPointIcon = document.getElementById("PointNotif");
+  const Notifcontnaire = document.querySelector(".contnaire-notif");
+
+  if (NotifBtn) {
+    NotifBtn.addEventListener("click", function () {
+      if (Notifcontnaire.style.display == "none" || Notifcontnaire.style.display == "") {
+        Notifcontnaire.style.display = "flex"
+      } else {
+        Notifcontnaire.style.display = "none"
+      }
+      NotifPointIcon.style.display = "none"
+    });
+  }
+
+
+  function clearNonNotificationItems() {
+    const notificationKeys = [];
+
+    notifications.forEach(notification => {
+      const notificationText = notification.innerText.trim();
+      notificationKeys.push(notificationText);
+    });
+
+    // Récupère toutes les clés du localStorage
+    const localStorageKeys = Object.keys(localStorage);
+
+    // Parcourt les clés du localStorage et supprime celles qui ne sont pas des notifications
+    localStorageKeys.forEach(key => {
+      if (!notificationKeys.includes(key)) {
+        localStorage.removeItem(key);
       }
     });
   }
-}
 
-// Fonction pour marquer une notification comme vue et la cacher
-function markNotificationAsViewed(notification) {
-  const notificationText = notification.innerText.trim();
-  localStorage.setItem(notificationText, 'vue');
-  const circle = notification.querySelector('.fa-circle');
+  // Appelez cette fonction lorsque vous avez besoin de nettoyer le localStorage
 
-  if (circle) {
-    circle.style.display = 'none';
+  if (notifications) {
+    clearNonNotificationItems();
   }
-}
-
-// Ajouter un gestionnaire d'événements pour marquer une notification comme vue lorsque survolée
-const notifications = document.querySelectorAll('.Notification li');
-if (notifications) {
-  notifications.forEach(notification => {
-    notification.addEventListener('mouseover', function () {
-      markNotificationAsViewed(notification);
-    });
-  });
-}
-
-// Charger les états des notifications lors du chargement de la page
-document.addEventListener("DOMContentLoaded", function () {
-  loadNotificationStates();
-});
-
-
-if (NotifBtn) {
-  NotifBtn.addEventListener("click", function () {
-    if (Notifcontnaire.style.display == "none" || Notifcontnaire.style.display == "") {
-      Notifcontnaire.style.display = "flex"
-    } else {
-      Notifcontnaire.style.display = "none"
-    }
-    NotifPointIcon.style.display = "none"
-
-  });
 
 }
 
-// function loadNotificationStates() {
-//   const notifications = document.querySelectorAll('.Notification li');
-//   let hasUnviewedNotification = false;
-
-//   if (notifications){
-//     notifications.forEach(notification => {
-//       const notificationText = notification.innerText.trim();
-//       const isViewed = localStorage.getItem(notificationText);
-
-//       if (isViewed !== 'vue') {
-//         // Si la notification n'a pas été vue, affiche le cercle
-//         const circle = notification.querySelector('.fa-circle');
-//         if (circle) {
-//           circle.style.display = 'block';
-//         }
-//         hasUnviewedNotification = true; // Met à jour à true si au moins une notification non vue est trouvée
-//       } else {
-//         // Si la notification a été vue, cache le cercle
-//         const circle = notification.querySelector('.fa-circle');
-//         if (circle) {
-//           circle.style.display = 'none';
-//         }
-//       }
-//     });
-
-//     // Affiche ou cache la pastille en fonction des notifications non vues
-//     const pointNotif = document.getElementById('PointNotif');
-//     if (pointNotif) {
-//       if (hasUnviewedNotification) {
-//         pointNotif.style.visibility = "visible"
-//       } else {
-//         pointNotif.style.visibility = "hidden"
-//       }
-//     }
-//   }
-// }
-
-function clearNonNotificationItems() {
-  const notifications = document.querySelectorAll('.Notification li');
-  const notificationKeys = [];
-
-  notifications.forEach(notification => {
-    const notificationText = notification.innerText.trim();
-    notificationKeys.push(notificationText);
-  });
-
-  // Récupère toutes les clés du localStorage
-  const localStorageKeys = Object.keys(localStorage);
-
-  // Parcourt les clés du localStorage et supprime celles qui ne sont pas des notifications
-  localStorageKeys.forEach(key => {
-    if (!notificationKeys.includes(key)) {
-      localStorage.removeItem(key);
-    }
-  });
-}
-
-// Appelez cette fonction lorsque vous avez besoin de nettoyer le localStorage
-clearNonNotificationItems();
 
 // ChargementLoad
 
@@ -367,6 +360,7 @@ if (models) {
   // Changer d'image dans tous les modèles toutes les 5 secondes
   setInterval(changeImages, 5000);
 }
+
 
 // Pagination
 
