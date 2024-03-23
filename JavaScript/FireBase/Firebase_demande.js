@@ -134,8 +134,14 @@ BtndiConf.addEventListener("click", async function (event) {
         fileUrls: fileUrls,
       });
     } else {
-      // Aucun fichier sélectionné, afficher un message d'erreur ou gérer le cas en conséquence
-      console.error('Aucun fichier sélectionné.');
+      // Aucun fichier sélectionné, envoyer les données sans les fichiers
+      const demandeDocRef = collection(db, 'demandes');
+      await addDoc(demandeDocRef, {
+        pseudo: pseudo,
+        description: description,
+        timestamp: timestamp,
+        selectedRadioValues,
+      });
     }
 
     DivPrev.style.display = "none";
@@ -165,7 +171,7 @@ async function checkCollectionLimit() {
     const demandesRef = collection(db, 'demandes');
     const demandesSnapshot = await getDocs(demandesRef);
 
-    if (demandesSnapshot.size >= 5) {
+    if (demandesSnapshot.size >= 15) {
       Formulaire.style.display = "none"
       FormulaireFermer.style.display = "block"
     } else {

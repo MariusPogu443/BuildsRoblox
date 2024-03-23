@@ -425,3 +425,46 @@ if (models) {
 // };
 
 // element(totalPages, 1);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const slides = document.querySelectorAll('.containers_defile');
+  const prevButton = document.querySelector('.prev');
+  const nextButton = document.querySelector('.next');
+  let slideIndex = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, idx) => {
+      if (idx === index) {
+        slide.classList.add('active');
+      } else {
+        slide.classList.remove('active');
+      }
+    });
+  }
+
+  function nextSlide() {
+
+    if (slideIndex < slides.length - 1) {
+      slideIndex++;
+    } else {
+      slideIndex = 0; // Si c'est le dernier slide, revenir au premier
+    }
+    showSlide(slideIndex);
+  }
+
+  function prevSlide() {
+    if (slideIndex > 0) {
+      slideIndex--;
+    } else {
+      slideIndex = slides.length - 1; // Si c'est le premier slide, aller au dernier
+    }
+    showSlide(slideIndex);
+  }
+
+  nextButton.addEventListener('click', nextSlide);
+  prevButton.addEventListener('click', prevSlide);
+
+  showSlide(slideIndex)
+
+  setInterval(nextSlide, 7000);
+});
